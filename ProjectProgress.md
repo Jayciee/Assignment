@@ -40,4 +40,4 @@ The project goals for this sprint is to carry out the highest priority user stor
 I have chosen to carry out these two tasks because a lot of user stories that I have defined are dependent on user stories that involve these two things.
 I have made a slight change to the board: introducing an epics column for visual purposes, re-formatting the gherkin syntax to be more clear and adding the dependencies for the definition of ready to each user story again for visual clarity.
 
-![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/ProjectBoardSprint0.png)
+![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/ProjectBoardSprint1.png)
