@@ -3,8 +3,8 @@ CREATE DATABASE MonsterHunterJournalDB;
 CREATE TABLE Sizes (
 	SizeID int PRIMARY KEY IDENTITY(1,1),
 	SizeName varchar(255),
-	SizeFloor decimal,
-	SizeCeiling decimal
+	SizeFloor decimal(18,2),
+	SizeCeiling decimal(18,2)
 )
 
 CREATE TABLE Elements(
@@ -51,7 +51,7 @@ CREATE TABLE Weapons (
 CREATE TABLE Records (
 	RecordID int PRIMARY KEY IDENTITY(1,1),
 	HunterName varchar(50),
-	TimeTaken decimal,
+	TimeTaken decimal(18,2),
 	RecordedMonsterSize decimal,
 	MonsterID int FOREIGN KEY REFERENCES Monsters(MonsterID),
 	WeaponID int FOREIGN KEY REFERENCES Weapons(WeaponID),
