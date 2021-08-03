@@ -4,7 +4,7 @@
 
 [Introduction](#Introduction)
 
-[Sprint 0](#Sprint 0)
+[Sprint 0](#sprint-0)
 
 ### Introduction
 
