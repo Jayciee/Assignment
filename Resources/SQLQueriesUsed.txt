@@ -1,2 +1,72 @@
 CREATE DATABASE MonsterHunterJournalDB;
 
+CREATE TABLE Sizes (
+	SizeID int PRIMARY KEY IDENTITY(1,1),
+	SizeName varchar(255),
+	SizeFloor decimal,
+	SizeCeiling decimal
+)
+
+CREATE TABLE Elements(
+	ElementID int PRIMARY KEY IDENTITY(1,1),
+	[Name] varchar(50)
+)
+CREATE TABLE Ailments(
+	AilmentID int PRIMARY KEY IDENTITY(1,1),
+	[Name] varchar(50)
+)
+
+CREATE TABLE WeaponTypes (
+	WeaponTypeID int PRIMARY KEY IDENTITY(1,1),
+	TypeName varchar(30),
+	[Description] varchar(255)
+)
+
+CREATE TABLE Habits (
+	HabitID int PRIMARY KEY IDENTITY(1,1),
+	HabitName varchar(50),
+	[Description] varchar(255)
+)
+
+CREATE TABLE Monsters (
+	MonsterID int PRIMARY KEY IDENTITY(1,1),
+	[Name] varchar(50),
+	[Description] varchar(255),
+	[Type] varchar(50),
+	ThreatLevel int,
+	PrimaryElementWeaknessID int FOREIGN KEY REFERENCES Elements(ElementID),
+	PrimaryAilmentWeaknessID int FOREIGN KEY REFERENCES Ailments(AilmentID),
+	MonsterImage varchar(255),
+	SizeID int FOREIGN KEY REFERENCES Sizes(SizeID)
+)
+CREATE TABLE Weapons (
+	WeaponID int PRIMARY KEY IDENTITY(1,1),
+	[Name] varchar(50),
+	WeaponTypeID int FOREIGN KEY REFERENCES WeaponTypes(WeaponTypeID),
+	Rarity int,
+	ElementID int FOREIGN KEY REFERENCES Elements(ElementID),
+	AilmentID int FOREIGN KEY REFERENCES Ailments(AilmentID),
+)
+
+CREATE TABLE Records (
+	RecordID int PRIMARY KEY IDENTITY(1,1),
+	HunterName varchar(50),
+	TimeTaken decimal,
+	RecordedMonsterSize decimal,
+	MonsterID int FOREIGN KEY REFERENCES Monsters(MonsterID),
+	WeaponID int FOREIGN KEY REFERENCES Weapons(WeaponID),
+	HuntSucceeded bit
+)
+
+CREATE TABLE Monsters_Habits (
+	MonsterID int REFERENCES Monsters(MonsterID),
+	HabitID int REFERENCES Habits(HabitID),
+	PRIMARY KEY (MonsterID,HabitID)
+)
+
+CREATE TABLE CounterTactics (
+	WeaponTypeID int REFERENCES WeaponTypes(WeaponTypeID),
+	HabitID int REFERENCES Habits(HabitID),
+	[Description] varchar(255),
+	PRIMARY KEY (WeaponTypeID,HabitID)
+)
