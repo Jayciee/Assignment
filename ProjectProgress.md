@@ -31,3 +31,13 @@ Kanban board at the end of Sprint 0
 To conclude sprint 0 I needed to decide what to do in my official sprint 1. 
 
 ### Sprint 1
+
+The project goals for this sprint is to carry out the highest priority user stories for the project. In this case it is:
+
+- The creation of the skeletion of my application
+- Designing and intialising of the database. 
+
+I have chosen to carry out these two tasks because a lot of user stories that I have defined are dependent on user stories that involve these two things.
+I have made a slight change to the board: introducing an epics column for visual purposes, re-formatting the gherkin syntax to be more clear and adding the dependencies for the definition of ready to each user story again for visual clarity.
+
+![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/ProjectBoardSprint0.png)
