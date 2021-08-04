@@ -10,7 +10,7 @@ namespace DataLayer
     { 
         public override string ToString()
         {
-            return $"{Name} of type {Type} of element {GetElementName(PrimaryElementId)}";
+            return $"{Name}";
         }
         private string GetElementName(int elementIDToSearch)
         {

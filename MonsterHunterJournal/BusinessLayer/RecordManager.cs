@@ -15,7 +15,7 @@ namespace BusinessLayer
             }
         }
 
-        public void addNewRecord(string hunterName, decimal timeTaken, decimal recordedMonsterSize, int monsterId, int weaponId, bool succeeded) 
+        public void addNewRecord(string hunterName, decimal timeTaken, int monsterId, int weaponId, bool succeeded,decimal recordedMonsterSize = (decimal)00.00) 
         {
             using (var db = new MonsterHunterJournalDBContext())
             {
@@ -26,16 +26,6 @@ namespace BusinessLayer
                 
             }
         }
-        public void addNewRecord(int recordID, string hunterName, decimal timeTaken, decimal recordedMonsterSize, int monsterId, int weaponId, bool succeeded)
-        {
-            using (var db = new MonsterHunterJournalDBContext())
-            {
-                var newRecord = new Record() { RecordId=recordID, HunterName = hunterName, TimeTaken = timeTaken, RecordedMonsterSize = recordedMonsterSize, MonsterId = monsterId, WeaponId = weaponId, HuntSucceeded = succeeded };
 
-                db.Records.Add(newRecord);
-                db.SaveChanges();
-
-            }
-        }
     }
 }

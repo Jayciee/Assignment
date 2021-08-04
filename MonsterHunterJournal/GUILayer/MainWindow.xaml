@@ -4,10 +4,36 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUILayer"
-        mc:Ignorable="d"
+        mc:Ignorable="d"     
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ListBox x:Name="testListBox" Margin="37,58,455,10"></ListBox>
+
+    <Grid x:Name="mainGrid" Margin="0,0,-22,0">
+
+        <ListBox x:Name="testListBox" Margin="37,58,272,10"></ListBox>
         <Label Content="listBox" HorizontalAlignment="Left" Margin="37,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.663,1.465"/>
+        <Button x:Name="submitBtn" Content="Submit" HorizontalAlignment="Left" Margin="606,339,0,0" VerticalAlignment="Top" Click="submitBtn_Click" Height="77" Width="96">
+            <UIElement.RenderTransform>
+                <MatrixTransform/>
+            </UIElement.RenderTransform>
+        </Button>
+        <TextBox x:Name="monsterSizeTextBox" HorizontalAlignment="Left" Margin="595,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="3"/>
+        <TextBox x:Name="timeTakenTextBox" HorizontalAlignment="Left" Margin="595,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="2"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Margin="595,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="1"/>
+        <Label x:Name="Hunter" Content="Hunter" HorizontalAlignment="Left" Margin="595,13,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="TimeTaken" Content="TimeTaken" HorizontalAlignment="Left" Margin="595,57,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="RecordedMonsterSize" Content="RecordedMonsterSize" HorizontalAlignment="Left" Margin="595,92,0,0" VerticalAlignment="Top"/>
+        <Label Content="Monster" HorizontalAlignment="Left" Margin="595,134,0,0" VerticalAlignment="Top"/>
+        <Label Content="Weapon" HorizontalAlignment="Left" Margin="595,178,0,0" VerticalAlignment="Top"/>
+        <StackPanel x:Name="huntSuccessRadioPanel" Margin="574,221,0,100" HorizontalAlignment="Left" Width="200">
+            <UIElement.RenderTransform>
+                <MatrixTransform/>
+            </UIElement.RenderTransform>
+            <Label Width="180">Was the hunt successful?</Label>
+            <RadioButton x:Name="succeedRadioBtn" Content="Yes" Checked="succeedRadioBtn_Checked" Height="17" Width="153" TabIndex="6"/>
+            <RadioButton x:Name="failedRadioBtn" Content="No" Checked="failedRadioBtn_Checked" Height="14" Width="153" TabIndex="7"/>
+        </StackPanel>
+        <ComboBox Name="monsterComboBox" HorizontalAlignment="Left" Margin="595,156,0,0" VerticalAlignment="Top" Width="136"/>
+        <ComboBox x:Name="weaponComboBox" HorizontalAlignment="Left" Margin="598,199,0,0" VerticalAlignment="Top" Width="133"/>
+
     </Grid>
 </Window>
