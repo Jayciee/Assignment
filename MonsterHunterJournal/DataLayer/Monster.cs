@@ -18,10 +18,10 @@ namespace DataLayer
         public string Description { get; set; }
         public string Type { get; set; }
         public int? ThreatLevel { get; set; }
-        public int? PrimaryElementId { get; set; }
-        public int? PrimaryAilmentId { get; set; }
+        public int PrimaryElementId { get; set; }
+        public int PrimaryAilmentId { get; set; }
         public string MonsterImage { get; set; }
-        public int? SizeId { get; set; }
+        public int SizeId { get; set; }
 
         public virtual Ailment PrimaryAilment { get; set; }
         public virtual Element PrimaryElement { get; set; }
