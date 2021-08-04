@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 namespace DataLayer
 {
     public partial class Monster
-    {
-        
-            
+    { 
         public override string ToString()
         {
             return $"{Name} of type {Type} of element {GetElementName(PrimaryElementId)}";
