@@ -8,6 +8,8 @@
 
 [Sprint 1](#sprint-1)
 
+[Sprint 2](#sprint-2)
+
 ### Introduction
 
 This project is a Monster Hunter Journal based on the videogame series "Monster Hunter". The application is a journal that provides users with the ability to document "hunts" that they have attempted on monsters in the game. The purpose of these hunting records is to allow for users to review tactics that they have previously employed and compare the methods to determine of which are the most effective. Alternatively the application can also be used simply to document their experience and attempts with monster hunts.  
@@ -85,5 +87,5 @@ The goals of this sprint were chosen because they are required to fulfil the mos
 
 **SprintBoard(Start)**
 
-![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectBoardSprint2Start.png)
+![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard2Start.png)
 
