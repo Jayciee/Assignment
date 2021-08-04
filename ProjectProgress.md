@@ -44,11 +44,11 @@ I have made a slight change to the board: introducing an epics column for visual
 
 **SprintBoard(Start)**
 
-![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectBoardSprint1Start.png)
+![ProjectBoardSprint1](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectBoardSprint1Start.png)
 
 **SprintBoard(End)**
 
-![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectBoardSprint1End.png)
+![ProjectBoardSprint1](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard1End.png)
 
 **RetroSpective**
 
@@ -87,5 +87,5 @@ The goals of this sprint were chosen because they are required to fulfil the mos
 
 **SprintBoard(Start)**
 
-![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard2Start.png)
+![ProjectBoardSprint2](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard2Start.png)
 
