@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BusinessLayer;
 
 namespace GUILayer
 {
@@ -20,9 +21,15 @@ namespace GUILayer
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MonsterManager _mm = new MonsterManager();
         public MainWindow()
         {
             InitializeComponent();
+            PopulateMonsterList();
+        }
+        public void PopulateMonsterList()
+        {
+            testListBox.ItemsSource = _mm.RetrieveAllMonsters();
         }
     }
 }
