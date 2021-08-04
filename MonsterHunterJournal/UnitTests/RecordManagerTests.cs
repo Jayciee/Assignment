@@ -39,7 +39,7 @@ namespace UnitTests
 
             var listOfCustomersQuery = _recordManager.RetrieveAllRecords();
             int numOfRecordsPreAdd = listOfCustomersQuery.Count();
-            _recordManager.addNewRecord(testName, testTime,testMonsterID,testWeaponID,testHuntSuccess, testSize);
+            _recordManager.AddNewRecord(testName, testTime,testMonsterID,testWeaponID,testHuntSuccess, testSize);
             Assert.That(numOfRecordsPreAdd + 1, Is.EqualTo(db.Records.ToList().Count()));
         }
         [Test]
@@ -49,7 +49,7 @@ namespace UnitTests
 
             var listOfCustomersQuery = _recordManager.RetrieveAllRecords();
             int numOfRecordsPreAdd = listOfCustomersQuery.Count();
-            _recordManager.addNewRecord(testName, testTime,testMonsterID, testWeaponID, testHuntSuccess, testSize);
+            _recordManager.AddNewRecord(testName, testTime,testMonsterID, testWeaponID, testHuntSuccess, testSize);
             var details = db.Records.Where(r => r.HunterName == testName).FirstOrDefault();
             Assert.That(details.HunterName, Is.EqualTo(testName));
             Assert.That(details.TimeTaken, Is.EqualTo(testTime));

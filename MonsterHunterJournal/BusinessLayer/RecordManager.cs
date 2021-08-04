@@ -15,7 +15,7 @@ namespace BusinessLayer
             }
         }
 
-        public void addNewRecord(string hunterName, decimal timeTaken, int monsterId, int weaponId, bool succeeded,decimal recordedMonsterSize = (decimal)00.00) 
+        public void AddNewRecord(string hunterName, decimal timeTaken, int monsterId, int weaponId, bool succeeded,decimal recordedMonsterSize = (decimal)00.00) 
         {
             using (var db = new MonsterHunterJournalDBContext())
             {

@@ -56,19 +56,17 @@ namespace GUILayer
         }
         private void submitBtn_Click(object sender, RoutedEventArgs e)
         {
-            //string name = nameTextBox.Text;
-            //decimal time = Convert.ToDecimal(timeTakenTextBox.Text);
-            //int monsterID = _mm.GetMonsterIDByName(monsterComboBox.Text);
+            string name = nameTextBox.Text;
+            decimal time = Convert.ToDecimal(timeTakenTextBox.Text);
+            int monsterID = _mm.GetMonsterIDByName(monsterComboBox.Text);
             int weaponID = _wm.GetWeaponIDByName(weaponComboBox.Text);
-            //decimal size = Convert.ToDecimal(monsterSizeTextBox.Text);
-            //Debug.WriteLine(monsterID);
-            Debug.WriteLine(weaponID);
-            //AddNewRecord(name, time, monsterID, weaponID, huntSuccess, size);
-            //PopulateRecordsList();
+            decimal size = Convert.ToDecimal(monsterSizeTextBox.Text);
+            AddNewRecord(name, time, monsterID, weaponID, huntSuccess, size);
+            PopulateRecordsList();
         }
         private void AddNewRecord(string name, decimal time, int monsterID, int weaponID, bool succeeded, decimal recordedSize)
         {
-            _rm.addNewRecord(name, time, monsterID, weaponID, succeeded, recordedSize);
+            _rm.AddNewRecord(name, time, monsterID, weaponID, succeeded, recordedSize);
         }
 
         //The two methods below need a refactor
