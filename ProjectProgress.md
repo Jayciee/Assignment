@@ -20,15 +20,15 @@ Sprint 0 consisted of preparing documentation for the project and general planni
 
 **Initial Mind Map**
 
-![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/Mind%20map.png)
+![MindMap](https://github.com/Jayciee/Assignment/blob/main/Images/Mind%20map.png)
 
 Mind map condensed into **Rough Ideas**, at this point I knew I wanted to do a Monster hunter journal.
 
-![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/Rough%20Ideas.png)
+![RoughIdeas](https://github.com/Jayciee/Assignment/blob/main/Images/Rough%20Ideas.png)
 
 Kanban board at the end of Sprint 0
 
-![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/ProjectBoardSprint0.png)
+![ProjectBoardSprint0](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectBoardSprint0.png)
 
 To conclude sprint 0 I needed to decide what to do in my official sprint 1. 
 
