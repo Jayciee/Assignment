@@ -2,11 +2,96 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFGUILayer.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="AliceBlue">
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="600"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="380"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Grid.Row="0" FontSize="40" Content="New Hunter Record" HorizontalAlignment="Center"></Label>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <TextBox x:Name="nameTextBox"
+                     Width="250"  
+                     HorizontalAlignment="Center" 
+                     materialDesign:HintAssist.Hint="Hunter Name"
+                     Margin="0,10,0,0">
+            </TextBox>
+            <ComboBox
+                Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                materialDesign:HintAssist.Hint="Hunted Monster"
+                ItemsSource="{Binding ShortStringList}"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Width="256"
+                Margin="0,10,0,0">
+            </ComboBox>
+            <ComboBox
+                Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                materialDesign:HintAssist.Hint="Weapon Used"
+                ItemsSource="{Binding ShortStringList}"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Width="256"
+                Margin="0,10,0,0">
+            </ComboBox>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBox x:Name="minutesTakenTextBox"
+                     Width="125"  
+                     HorizontalAlignment="Center" 
+                     materialDesign:HintAssist.Hint="Minutes Taken"
+                     Margin="0,10,10,0">
+                </TextBox>
+                <TextBox x:Name="secondsTakenTextBox"
+                     Width="125"  
+                     HorizontalAlignment="Center" 
+                     materialDesign:HintAssist.Hint="Seconds Taken"
+                     Margin="0,10,0,0">
+                </TextBox>
+            </StackPanel>
+            <Slider 
+                Width="250"
+                Value="99"
+                Minimum="0.00"
+                Maximum="50.00"
+                Style="{StaticResource MaterialDesignDiscreteSlider}"
+                TickFrequency="{Binding DiscreteHorizontal.TickFrequency}"
+                TickPlacement="BottomRight" >
+            </Slider>
+            <Label HorizontalAlignment="Center"> Hunt Succeeded?</Label>
+            <ListBox
+                HorizontalAlignment="Center"
+                Style="{StaticResource MaterialDesignChoiceChipPrimaryListBox}"
+                x:Name="huntSucceededRadioButton">
+                <ListBoxItem
+                    Content="Succeeded" />
+                <ListBoxItem
+                    IsSelected="True"
+                    Content="Failed" />
+            </ListBox>
+            <TextBox x:Name="recordedSizeTextBox"
+                     Visibility="Collapsed"
+                     Width="250"  
+                     HorizontalAlignment="Center" 
+                     materialDesign:HintAssist.Hint="Recorded Size"
+                     Margin="0,10,0,0">
+            </TextBox>
+            <Button
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                Margin="0,20,0,0"
+                Height="40"
+                Width="100"
+                materialDesign:ButtonAssist.CornerRadius="10"
+                ToolTip="MaterialDesignRaisedButton with Round Corners"
+                IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}">
+                <TextBlock Text="Submit" />
+            </Button>
+        </StackPanel>
     </Grid>
 </UserControl>

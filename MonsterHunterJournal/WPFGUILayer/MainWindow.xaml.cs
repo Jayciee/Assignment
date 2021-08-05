@@ -23,5 +23,15 @@ namespace WPFGUILayer
         {
             DataContext = new MonstersListView();
         }
+
+        private void newWeaponLinkBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new AddNewWeaponView();
+        }
+
+        private void newMonsterEntryLinkBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new NewMonsterEntryView();
+        }
     }
 }
