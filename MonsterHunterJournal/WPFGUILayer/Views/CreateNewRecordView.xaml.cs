@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFGUILayer.ViewModels;
 
 namespace WPFGUILayer.Views
 {
@@ -23,6 +24,7 @@ namespace WPFGUILayer.Views
         public CreateNewRecordView()
         {
             InitializeComponent();
+            this.DataContext = new NewHunterRecordViewModel("Message Success");
         }
     }
 }
