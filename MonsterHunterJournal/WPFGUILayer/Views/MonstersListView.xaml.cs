@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using WPFGUILayer;
 using BusinessLayer;
 
 namespace WPFGUILayer.Views
@@ -21,7 +22,7 @@ namespace WPFGUILayer.Views
 
         private void monsterDetailsBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            
+            //Not Yet Implemented
         }
     }
 }

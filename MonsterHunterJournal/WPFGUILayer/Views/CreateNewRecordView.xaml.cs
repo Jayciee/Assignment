@@ -24,7 +24,7 @@ namespace WPFGUILayer.Views
         public CreateNewRecordView()
         {
             InitializeComponent();
-            this.DataContext = new NewHunterRecordViewModel("Message Success");
+            this.DataContext = new NewHunterRecordViewModel("New Message Made successfully");
         }
     }
 }

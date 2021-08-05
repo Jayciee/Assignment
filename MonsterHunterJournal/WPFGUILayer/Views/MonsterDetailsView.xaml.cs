@@ -23,6 +23,7 @@ namespace WPFGUILayer.Views
         public MonsterDetailsView()
         {
             InitializeComponent();
+            
         }
     }
 }

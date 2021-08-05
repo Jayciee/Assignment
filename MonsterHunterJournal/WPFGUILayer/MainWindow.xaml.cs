@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using WPFGUILayer.ViewModels;
 using WPFGUILayer.Views;
 
