@@ -29,6 +29,7 @@ namespace GUILayer
         bool huntSuccess; // This needs a refactor
         public MainWindow()
         {
+
             InitializeComponent();
             PopulateRecordsList();
             PopulateMonsterComboBox();

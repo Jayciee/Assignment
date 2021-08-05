@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{1EE32DCC-6095-41B0-9613-37614D192AB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{1EE32DCC-6095-41B0-9613-37614D192AB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{06F3EC02-1D1C-4BAA-B4F9-5E0301A720F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{06F3EC02-1D1C-4BAA-B4F9-5E0301A720F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{746EB9BD-4FF4-473F-881F-F1F29C46468D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{746EB9BD-4FF4-473F-881F-F1F29C46468D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUILayer", "GUILayer\GUILayer.csproj", "{19ADAA1B-EE7E-492C-A59E-08A00F81303C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestLayer", "GUILayer\TestLayer.csproj", "{19ADAA1B-EE7E-492C-A59E-08A00F81303C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFGUILayer", "WPFGUILayer\WPFGUILayer.csproj", "{B1754654-EA94-4C50-ACE5-0B3D60E2C419}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{19ADAA1B-EE7E-492C-A59E-08A00F81303C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19ADAA1B-EE7E-492C-A59E-08A00F81303C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19ADAA1B-EE7E-492C-A59E-08A00F81303C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1754654-EA94-4C50-ACE5-0B3D60E2C419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1754654-EA94-4C50-ACE5-0B3D60E2C419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1754654-EA94-4C50-ACE5-0B3D60E2C419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1754654-EA94-4C50-ACE5-0B3D60E2C419}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
