@@ -10,6 +10,8 @@
 
 [Sprint 2](#sprint-2)
 
+[Sprint 3](#sprint-3)
+
 ### Introduction
 
 This project is a Monster Hunter Journal based on the videogame series "Monster Hunter". The application is a journal that provides users with the ability to document "hunts" that they have attempted on monsters in the game. The purpose of these hunting records is to allow for users to review tactics that they have previously employed and compare the methods to determine of which are the most effective. Alternatively the application can also be used simply to document their experience and attempts with monster hunts.  
@@ -87,5 +89,46 @@ The goals of this sprint were chosen because they are required to fulfil the mos
 
 **SprintBoard(Start)**
 
-![ProjectBoardSprint2](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard2Start.png)
+![ProjectBoardSprint2S](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard2Start.png)
+
+**SprintBoard(End)**
+
+![ProjectBoardSprint2E](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard2End.png)
+
+**RetroSpective**
+
+Sprint 2 was not as successful as sprint 1, despite that the majority of sprint goals were achieved. The only user story that was not attempted was user story "Create New Hunt Record in App". The reason I opted not to start this user story was because I originally placed it in the sprint with the idea in mind that it was required to accomplish the CREATE functionality which was not the case. In the end I pushed it back to Sprint 3 knowing that most of the WPF functionality would be worked on in that Sprint. This is similar to the user Story 5.4 Initialising Starting Data in database. I felt it was a better use of time to insert test data as I needed them as opposed to doing it all at once in order to get a demo-able application as soon as possible.
+
+*What did we do well, that if we don't discuss might forget?*
+
+- Like in Sprint 1, Time management, giving plenty of time to iron out bugs and work out design plans in the wireframes and laying the foundations for future code which will in the long run speed up development time.
+- Doing the sprints incrementally such that we have a demo-able application as early as possible.
+
+*What did we learn?*
+
+-  To think more clearly about the user stories to prioritise during sprint planning 
+
+*What should we do differently next time?*
+
+-  Re-prioritise sprints, it may be easier to categorise them together and do them in chunks now that the skeleton has been made.
+
+What still puzzles us? What potential problems do we foresee?
+
+- The wireframes in Sprint 2 (This sprint) will show any flaws they had in Sprint 3 when it comes to creating the WPF GUI's.  
+- In Sprint 2 I had designed multiple managers to manage different tables. Initially this was done to improve readability and maintainability of code but I am worried the way this was done (currently without inheritance or interfaces) will lead to lots of redundant code. This may need to be fixed sooner (sprint 3) rather than later. 
+- In the coming Sprint my inherent lack of exposure to WPF may severely hinder progress depending on the rate at which I learn the technology.
+- I may need to re-implement the Create New Hunter Record functionality such that it fits in the new GUI.
+
+### Sprint 3
+
+The goals in this Sprint are to complete as much of the WPF GUI's as possible:
+
+- Implement the WPF's GUI
+- Make sure existing functionality fits correctly into the GUI
+
+The completion of the User stories in this sprint should mark the completion of the laying of the foundations for implementing the rest of the User stories in an incremental fashion. See how well the Create New Hunter Record function fits into the GUI created today will give a good idea of how well the current format I've laid out will work with the rest of the functions.
+
+**SprintBoard(Start)**
+
+![ProjectBoardSprint3](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard3Start.png)
 
