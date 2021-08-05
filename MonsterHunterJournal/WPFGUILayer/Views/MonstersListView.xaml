@@ -1,12 +1,69 @@
 ﻿<UserControl x:Class="WPFGUILayer.Views.MonstersListView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFGUILayer.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Black">
-            
+    <Grid Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" 
+               Content="Monster List" 
+               FontSize="30" 
+               Margin="0,10,0,0"
+               HorizontalAlignment="Center"></Label>
+        <DockPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="1">
+            <StackPanel>
+                <ListBox Name="monsterListListBox" Height="350" Width="380" Margin="10,20,0,0" HorizontalAlignment="Center">
+                </ListBox>
+            </StackPanel>
+        </DockPanel>
+        <DockPanel Grid.Column="1" 
+                   Grid.Row="1" 
+                   Grid.RowSpan="1" 
+                   Grid.ColumnSpan="1"
+                   >
+            <StackPanel Margin="0,20,0,0">
+                <materialDesign:Card
+                    Width="250">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Wavey Hand Monster" Margin ="0,5,0,10" FontWeight="ExtraBold" HorizontalAlignment="Center"></TextBlock>
+                        <Image Height="140"
+                               Width="200"
+                               Stretch="Fill"
+                               Grid.Row="1"
+                               Source="/Views/Vector.jpg"/>
+                        <StackPanel
+                            Grid.Row="2"
+                            Margin="8 5 8 0">
+                            <TextBlock
+                                Margin="5,5,5,5"
+                                TextWrapping="Wrap"
+                                VerticalAlignment="Center"
+                                Text="It's wavy arms are scary. It waves and waves and waves and waves and waves and waves and waves." />
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Height="90">
+                            <Button Margin="0,5,0,5" Width="200" Content="Monster Details"></Button>
+                            <Button Margin="0,5,0,5" Width="200" Content="Hunt Details"></Button>
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+            </StackPanel>
+        </DockPanel>
     </Grid>
 </UserControl>
