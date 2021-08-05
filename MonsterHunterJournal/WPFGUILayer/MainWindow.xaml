@@ -4,8 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:local="clr-namespace:WPFGUILayer"
-        xmlns:viewmodels="clr-namespace:WPFGUILayer.ViewModels"
+        xmlns:local="clr-namespace:WPFGUILayer.ViewModels"
         xmlns:views="clr-namespace:WPFGUILayer.Views"
         mc:Ignorable="d"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -18,7 +17,7 @@
         Height="600" Width="1000">
     <Window.Resources>
         <DataTemplate x:Name="newHunterRecordTemplate" DataType="(x:Type viewmodels:NewHunterRecordViewModel)">
-            <views:CreateNewRecordView DataContext="{Binding}"/>
+            <views:CreateNewRecordView DataContext="{Binding}" />
         </DataTemplate>
         <DataTemplate x:Name="monsterListTemplate" DataType="(x:Type viewmodels:MonsterListViewModel)">
             <views:MonstersListView DataContext="{Binding}"/>
@@ -60,5 +59,6 @@
             </StackPanel>
         </DockPanel>
         <ContentControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="4" Content="{Binding}"/>
+        
     </Grid>
 </Window>

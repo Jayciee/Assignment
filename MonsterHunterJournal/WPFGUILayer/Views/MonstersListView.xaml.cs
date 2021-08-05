@@ -18,5 +18,10 @@ namespace WPFGUILayer.Views
         {
             monsterListListBox.ItemsSource = _mm.RetrieveAllMonsters();
         }
+
+        private void monsterDetailsBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            
+        }
     }
 }

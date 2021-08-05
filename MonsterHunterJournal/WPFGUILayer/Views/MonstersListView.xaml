@@ -47,7 +47,7 @@
                                Width="200"
                                Stretch="Fill"
                                Grid.Row="1"
-                               Source="/Views/Vector.jpg"/>
+                               Source="../Images/MHLogo.png"/>
                         <StackPanel
                             Grid.Row="2"
                             Margin="8 5 8 0">
@@ -58,8 +58,8 @@
                                 Text="It's wavy arms are scary. It waves and waves and waves and waves and waves and waves and waves." />
                         </StackPanel>
                         <StackPanel Grid.Row="3" Height="90">
-                            <Button Margin="0,5,0,5" Width="200" Content="Monster Details"></Button>
-                            <Button Margin="0,5,0,5" Width="200" Content="Hunt Details"></Button>
+                            <Button x:Name="monsterDetailsBtn" Margin="0,5,0,5" Width="200" Content="Monster Details" Click="monsterDetailsBtn_Click"></Button>
+                            <Button x:Name="huntDetailsBtn" Margin="0,5,0,5" Width="200" Content="Hunt Details"></Button>
                         </StackPanel>
                     </Grid>
                 </materialDesign:Card>

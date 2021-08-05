@@ -10,8 +10,6 @@
     <None Remove="Images\MHLogo.jpg" />
     <None Remove="Images\MHLogo.png" />
     <None Remove="Images\Vector.jpg" />
-    <None Remove="Views\MHLogo.png" />
-    <None Remove="Views\Vector.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,7 +26,5 @@
     <Resource Include="Images\MHLogo.jpg" />
     <Resource Include="Images\MHLogo.png" />
     <Resource Include="Images\Vector.jpg" />
-    <Resource Include="Views\MHLogo.png" />
-    <Resource Include="Views\Vector.jpg" />
   </ItemGroup>
 </Project>
