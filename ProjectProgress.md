@@ -154,7 +154,7 @@ By the end of this sprint I had managed to create 5 GUI views from my previously
 
 ![Sprint3MonsterEntry](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint3NewMonsterEntry.png)
 
-![Sprint3Weapon](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/NewWeapon.png)
+![Sprint3Weapon](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint3NewWeapon.png)
 
 **RetroSpective**
 
