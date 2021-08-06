@@ -12,6 +12,8 @@
 
 [Sprint 3](#sprint-3)
 
+[Sprint 4](#sprint-4)
+
 ### Introduction
 
 This project is a Monster Hunter Journal based on the videogame series "Monster Hunter". The application is a journal that provides users with the ability to document "hunts" that they have attempted on monsters in the game. The purpose of these hunting records is to allow for users to review tactics that they have previously employed and compare the methods to determine of which are the most effective. Alternatively the application can also be used simply to document their experience and attempts with monster hunts.  
@@ -95,6 +97,10 @@ The goals of this sprint were chosen because they are required to fulfil the mos
 
 ![ProjectBoardSprint2E](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard2End.png)
 
+**Demo-able Progress**
+
+![Sprint2HuntRecord](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint2NewHuntRecord.png)
+
 **RetroSpective**
 
 Sprint 2 was not as successful as sprint 1, despite that the majority of sprint goals were achieved. The only user story that was not attempted was user story "Create New Hunt Record in App". The reason I opted not to start this user story was because I originally placed it in the sprint with the idea in mind that it was required to accomplish the CREATE functionality which was not the case. In the end I pushed it back to Sprint 3 knowing that most of the WPF functionality would be worked on in that Sprint. This is similar to the user Story 5.4 Initialising Starting Data in database. I felt it was a better use of time to insert test data as I needed them as opposed to doing it all at once in order to get a demo-able application as soon as possible.
@@ -112,7 +118,7 @@ Sprint 2 was not as successful as sprint 1, despite that the majority of sprint 
 
 -  Re-prioritise sprints, it may be easier to categorise them together and do them in chunks now that the skeleton has been made.
 
-What still puzzles us? What potential problems do we foresee?
+*What still puzzles us? What potential problems do we foresee?*
 
 - The wireframes in Sprint 2 (This sprint) will show any flaws they had in Sprint 3 when it comes to creating the WPF GUI's.  
 - In Sprint 2 I had designed multiple managers to manage different tables. Initially this was done to improve readability and maintainability of code but I am worried the way this was done (currently without inheritance or interfaces) will lead to lots of redundant code. This may need to be fixed sooner (sprint 3) rather than later. 
@@ -131,4 +137,59 @@ The completion of the User stories in this sprint should mark the completion of 
 **SprintBoard(Start)**
 
 ![ProjectBoardSprint3](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard3Start.png)
+
+**SprintBoard(End)**
+
+![ProjectBoardSprint3](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard3End.png)
+
+**Demo-able Progress**
+
+By the end of this sprint I had managed to create 5 GUI views from my previously designed wireframes and connect them together
+
+![Sprint3HomePage](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint3LandingPage.png)
+
+![Sprint3MonsterList](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint3MonsterList.png)
+
+![Sprint3HuntRecord](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint3NewHuntRecord.png)
+
+![Sprint3MonsterEntry](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint3NewMonsterEntry.png)
+
+![Sprint3Weapon](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/NewWeapon.png)
+
+**RetroSpective**
+
+A lot of time was spent learning new technology. Most of the user stories have all reached at minimum the review/testing phase. There are some small kinks to iron out but for the most part the project is on track with the number of sprints remaining. The only user story not to make it to at least review/testing is User Story 4.3 which is only missing a small amount of work to finish off. This will be pushed to start of the next sprint to do. With this in mind I may reduce the planned workload in sprint 4 to account for this.
+
+*What did we do well, that if we don't discuss might forget?*
+
+- Taking the time out of the sprint to understand how certain things work in new technologies was useful in making progress  later in the sprint.
+
+*What did we learn?*
+
+- A rudimentary understanding in how MVVM works, particularly how binding and data context is passed between views
+- A stronger understanding of general WPF particularly grids and stack panels.
+- The benefits of the Material Designs NuGetPackage
+
+*What should we do differently next time?*
+
+- It might be worth trying a paper run of how the user journey to see how the different pages/views should connect with each other. A lot of on-the-fly planning was done to interconnect the pages as from the wireframe alone it was not clear how certain pages should connect and which features should be placed where.
+- It may have been more effective for me to further break up certain User Stories to better visualise what left needs doing in a sprint. User Storys 4.2 and 4.3 in particular proved to take longer than anticipated to accomplish.
+
+*What still puzzles us? What potential problems do we foresee?*
+
+- There is currently a minor blocker in the form of not knowing how to create new views in the main window from within a view. This means that I can only dynamically swap views from the main window-bar. I have a couple ideas of how to deal with this issue so this blocker should not last long. It will just take some time to iron out.
+- With the way messaging is set out within the views it may become time consuming when coding in the functionality.
+
+### Sprint 4
+
+The goal of this sprint are to: 
+
+- Put in the remaining work for User Story 4.3. 
+- Complete Epic 2 which involves User Stories 2.1 and 2.2. 
+
+The completion of these Goals will finish laying the foundations for the rest of the functionality to stand on as well as show the foundations will hold when layered with said functionality.
+
+**SprintBoard(Start)**
+
+![ProjectBoardSprint4](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard4Start.png)
 
