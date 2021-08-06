@@ -10,6 +10,7 @@ namespace WPFGUILayer
     /// </summary>
     public partial class MainWindow : Window
     {
+        string _bindingMessage;
         public MainWindow()
         {
             InitializeComponent();
@@ -17,7 +18,7 @@ namespace WPFGUILayer
 
         private void newHunterRecordBtn_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new CreateNewRecordView();
+            DataContext = new CreateNewRecordView(_bindingMessage);
         }
 
         private void monsterListLinkBtn_Click(object sender, RoutedEventArgs e)
@@ -33,6 +34,11 @@ namespace WPFGUILayer
         private void newMonsterEntryLinkBtn_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new NewMonsterEntryView();
+        }
+
+        private void testBtn_Click(object sender, RoutedEventArgs e)
+        {
+            _bindingMessage = "Woooooooooow it Changed!";
         }
     }
 }

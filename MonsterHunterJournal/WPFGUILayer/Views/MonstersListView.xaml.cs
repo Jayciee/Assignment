@@ -1,5 +1,5 @@
 ﻿using System.Windows.Controls;
-using WPFGUILayer;
+using WPFGUILayer.ViewModels;
 using BusinessLayer;
 
 namespace WPFGUILayer.Views
@@ -13,6 +13,7 @@ namespace WPFGUILayer.Views
         public MonstersListView()
         {
             InitializeComponent();
+            this.DataContext = new MonsterListViewModel("MONSTER LIST HERE");
             PopulateMonstersList();
         }
         private void PopulateMonstersList()

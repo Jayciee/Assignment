@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="WPFGUILayer.Views.listOfMonsterHabitsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFGUILayer.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Habits List" 
+               HorizontalAlignment="Center" 
+               Grid.ColumnSpan="2"
+               FontSize="30"/>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
+            <ListBox Name="habitsListBox"
+                     Margin="0,10,0,0"
+                     Height="320"
+                     Width="350"></ListBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
+            <StackPanel Margin="0,20,0,0">
+                <materialDesign:Card
+                    Width="250">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" 
+                                   Text="HunterRecordID : Default" 
+                                   Margin ="0,5,0,10" 
+                                   FontWeight="ExtraBold" 
+                                   HorizontalAlignment="Center"></TextBlock>
+                        <TextBox
+                            x:Name="habitDescriptionBox"
+                            Grid.Row="1"
+                            TextWrapping="Wrap"
+                            VerticalAlignment="Stretch"
+                            Background="FloralWhite"
+                            MaxWidth="200"
+                            AcceptsReturn="True"
+                            VerticalScrollBarVisibility="Auto"
+                            SpellCheck.IsEnabled="True"
+                            materialDesign:HintAssist.Hint="Monster Habit description goes here."
+                            Height="80"
+                            Margin="0,10,0,0"
+                            Text="When in close quarters the target monster will turn sharply and attempt to bite you." />
+                        <StackPanel Grid.Row="2">
+                            <ComboBox
+                            Grid.Row="2"
+                            Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                            materialDesign:HintAssist.Hint="Type of Weapon"
+                            ItemsSource="{Binding ShortStringList}"
+                            materialDesign:TextFieldAssist.HasClearButton="True"
+                            Width="200"
+                            Margin="0,10,0,0">
+                            </ComboBox>
+                        </StackPanel>
+                        <TextBox
+                                Grid.Row="3"
+                                TextWrapping="Wrap"
+                                VerticalAlignment="Stretch"
+                                Background="FloralWhite"
+                                MaxWidth="200"
+                                AcceptsReturn="True"
+                                VerticalScrollBarVisibility="Auto"
+                                SpellCheck.IsEnabled="True"
+                                materialDesign:HintAssist.Hint="CounterTactic description here."
+                                Height="80"
+                                Margin="0,10,0,0"
+                                Text="Timing a dodge roll to the side will provide sufficient time to bonk the monster once on the head." />
+                    </Grid>
+                </materialDesign:Card>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

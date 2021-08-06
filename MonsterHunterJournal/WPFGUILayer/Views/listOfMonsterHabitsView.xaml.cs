@@ -12,24 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPFGUILayer.ViewModels;
 
 namespace WPFGUILayer.Views
 {
     /// <summary>
-    /// Interaction logic for CreateNewRecordView.xaml
+    /// Interaction logic for listOfMonsterHabitsView.xaml
     /// </summary>
-    public partial class CreateNewRecordView : UserControl
+    public partial class listOfMonsterHabitsView : UserControl
     {
-        public CreateNewRecordView()
+        public listOfMonsterHabitsView()
         {
             InitializeComponent();
-            this.DataContext = new NewHunterRecordViewModel("NEW RECORD HERE");
-        }
-        public CreateNewRecordView(string message)
-        {
-            InitializeComponent();
-            this.DataContext = new NewHunterRecordViewModel(message);
         }
     }
 }
