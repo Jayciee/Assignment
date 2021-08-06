@@ -25,7 +25,6 @@
                FontSize="40" 
                Content="New Hunter Record" 
                HorizontalAlignment="Center"></Label>
-        <Label Content="{Binding Message}"></Label>
         <StackPanel Grid.Column="1" Grid.Row="1">
             <TextBox x:Name="nameTextBox"
                      Width="250"  
@@ -33,7 +32,7 @@
                      materialDesign:HintAssist.Hint="Hunter Name"
                      Margin="0,10,0,0">
             </TextBox>
-            <ComboBox
+            <ComboBox x:Name="huntedMonsterComboBox"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Hint="Hunted Monster"
                 ItemsSource="{Binding ShortStringList}"
@@ -41,7 +40,7 @@
                 Width="256"
                 Margin="0,10,0,0">
             </ComboBox>
-            <ComboBox
+            <ComboBox x:Name="weaponUsedComboBox"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Hint="Weapon Used"
                 ItemsSource="{Binding ShortStringList}"
@@ -49,37 +48,28 @@
                 Width="256"
                 Margin="0,10,0,0">
             </ComboBox>
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                <TextBox x:Name="minutesTakenTextBox"
-                     Width="125"  
-                     HorizontalAlignment="Center" 
-                     materialDesign:HintAssist.Hint="Minutes Taken"
-                     Margin="0,10,10,0">
-                </TextBox>
-                <TextBox x:Name="secondsTakenTextBox"
-                     Width="125"  
-                     HorizontalAlignment="Center" 
-                     materialDesign:HintAssist.Hint="Seconds Taken"
-                     Margin="0,10,0,0">
-                </TextBox>
+            <StackPanel 
+                HorizontalAlignment="Center" 
+                Orientation="Horizontal"
+                Margin="0,0,0,10">
+                <ComboBox 
+                    Name="minutesTakenComboBox" 
+                    Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                    materialDesign:HintAssist.Hint="Minutes"/>
+                <ComboBox 
+                    Name="secondsTakenComboBox" 
+                    Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                    materialDesign:HintAssist.Hint="Seconds"
+                    Margin="20,0,0,0"/>
             </StackPanel>
-            <Slider 
-                Width="250"
-                Value="99"
-                Minimum="0.00"
-                Maximum="50.00"
-                Style="{StaticResource MaterialDesignDiscreteSlider}"
-                TickFrequency="{Binding DiscreteHorizontal.TickFrequency}"
-                TickPlacement="BottomRight" >
-            </Slider>
-            <Label HorizontalAlignment="Center">Hunt Succeeded?</Label>
+        <Label HorizontalAlignment="Center">Hunt Succeeded?</Label>
             <ListBox
                 HorizontalAlignment="Center"
                 Style="{StaticResource MaterialDesignChoiceChipPrimaryListBox}"
                 x:Name="huntSucceededRadioButton">
-                <ListBoxItem
+                <ListBoxItem x:Name="succeedListBoxItem"
                     Content="Succeeded" />
-                <ListBoxItem
+                <ListBoxItem x:Name="failedListBoxItem"
                     IsSelected="True"
                     Content="Failed" />
             </ListBox>
@@ -98,7 +88,7 @@
                 materialDesign:ButtonAssist.CornerRadius="10"
                 ToolTip="MaterialDesignRaisedButton with Round Corners"
                 IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}">
-                <TextBlock Text="Submit" />
+                <TextBlock x:Name="submitBtn" Text="Submit" />
             </Button>
         </StackPanel>
     </Grid>

@@ -18,7 +18,8 @@ namespace WPFGUILayer
 
         private void newHunterRecordBtn_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new CreateNewRecordView(_bindingMessage);
+            DataContext = new CreateNewRecordView();
+            //DataContext = new CreateNewRecordView(_bindingMessage); 
         }
 
         private void monsterListLinkBtn_Click(object sender, RoutedEventArgs e)

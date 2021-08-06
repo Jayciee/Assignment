@@ -1,18 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WPFGUILayer.ViewModels;
+using BusinessLayer;
+using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace WPFGUILayer.Views
 {
@@ -21,15 +14,50 @@ namespace WPFGUILayer.Views
     /// </summary>
     public partial class CreateNewRecordView : UserControl
     {
+        private MonsterManager _mm = new MonsterManager();
+        private RecordManager _rm = new RecordManager();
+        private WeaponManager _wm = new WeaponManager();
         public CreateNewRecordView()
         {
             InitializeComponent();
-            this.DataContext = new NewHunterRecordViewModel("NEW RECORD HERE");
+            this.DataContext = new NewHunterRecordViewModel();
+            PopulateWeaponComboBox();
+            PopulateMonsterComboBox();
+            PopulateMinuteAndSecondsComboBoxes();
         }
-        public CreateNewRecordView(string message)
+        private void PopulateMonsterComboBox()
         {
-            InitializeComponent();
-            this.DataContext = new NewHunterRecordViewModel(message);
+            huntedMonsterComboBox.ItemsSource = _mm.RetrieveAllMonsters();
         }
+        private void PopulateWeaponComboBox()
+        {
+            weaponUsedComboBox.ItemsSource = _wm.RetrieveAllWeapons();
+        }
+        private void PopulateMinuteAndSecondsComboBoxes()
+        {
+            List<int> minutes = new List<int>();
+            List<int> seconds = new List<int>();
+            for (int i = 1; i < 51; i++)
+            {
+                minutes.Add(i);
+            }
+            for (int i = 1; i < 61; i++)
+            {
+                seconds.Add(i);
+            }
+            minutesTakenComboBox.ItemsSource = minutes;
+            secondsTakenComboBox.ItemsSource = seconds;
+            
+        }
+        //public CreateNewRecordView()
+        //{
+        //    InitializeComponent();
+        //    this.DataContext = new NewHunterRecordViewModel("NEW RECORD HERE");
+        //}
+        //public CreateNewRecordView(string message)
+        //{
+        //    InitializeComponent();
+        //    this.DataContext = new NewHunterRecordViewModel(message);
+        //}
     }
 }
