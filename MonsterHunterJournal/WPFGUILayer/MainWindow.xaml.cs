@@ -23,7 +23,7 @@ namespace WPFGUILayer
 
         private void monsterListLinkBtn_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new MonstersListView();
+            DataContext = new MonstersListView(DataContext);
         }
 
         private void newWeaponLinkBtn_Click(object sender, RoutedEventArgs e)
@@ -34,11 +34,6 @@ namespace WPFGUILayer
         private void newMonsterEntryLinkBtn_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new NewMonsterEntryView();
-        }
-
-        private void testBtn_Click(object sender, RoutedEventArgs e)
-        {
-            _bindingMessage = "Woooooooooow it Changed!";
         }
     }
 }

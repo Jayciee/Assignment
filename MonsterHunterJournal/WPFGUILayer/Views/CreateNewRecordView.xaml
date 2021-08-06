@@ -72,7 +72,7 @@
                 TickFrequency="{Binding DiscreteHorizontal.TickFrequency}"
                 TickPlacement="BottomRight" >
             </Slider>
-            <Label HorizontalAlignment="Center"> Hunt Succeeded?</Label>
+            <Label HorizontalAlignment="Center">Hunt Succeeded?</Label>
             <ListBox
                 HorizontalAlignment="Center"
                 Style="{StaticResource MaterialDesignChoiceChipPrimaryListBox}"

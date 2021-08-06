@@ -56,13 +56,8 @@
                         Margin="0,0,10,0"
                         Content="NewMonsterEntry" 
                         Click="newMonsterEntryLinkBtn_Click"></Button>
-                <Button x:Name="testBtn"
-                        Margin="0,0,10,0"
-                        Content="TestBtn" 
-                        Click="testBtn_Click"></Button>
             </StackPanel>
         </DockPanel>
         <ContentControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="4" Content="{Binding}"/>
-        
     </Grid>
 </Window>

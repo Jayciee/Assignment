@@ -63,7 +63,7 @@
                         </StackPanel>
                         <StackPanel Grid.Row="3" Height="90">
                             <Button x:Name="monsterDetailsBtn" Margin="0,5,0,5" Width="200" Content="Monster Details" Click="monsterDetailsBtn_Click"></Button>
-                            <Button x:Name="huntDetailsBtn" Margin="0,5,0,5" Width="200" Content="Hunt Details"></Button>
+                            <Button x:Name="huntDetailsBtn" Margin="0,5,0,5" Width="200" Content="Hunt Attempts" Click="huntDetailsBtn_Click"></Button>
                         </StackPanel>
                     </Grid>
                 </materialDesign:Card>
