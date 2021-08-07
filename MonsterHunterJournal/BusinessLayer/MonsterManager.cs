@@ -19,5 +19,11 @@ namespace BusinessLayer
             int idToReturn = db.Monsters.Where(m => m.Name == monsterName).Select(m=>m.MonsterId).FirstOrDefault();
             return idToReturn;
         }
+        public string GetMonsterNameByID(int id)
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            string stringToReturn = db.Monsters.Where(m => m.MonsterId == id).Select(m => m.Name).FirstOrDefault();
+            return stringToReturn;
+        }
     }
 }
