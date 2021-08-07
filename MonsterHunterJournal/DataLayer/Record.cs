@@ -9,7 +9,7 @@ namespace DataLayer
     {
         public int RecordId { get; set; }
         public string HunterName { get; set; }
-        public decimal? TimeTaken { get; set; }
+        public decimal TimeTaken { get; set; }
         public decimal? RecordedMonsterSize { get; set; }
         public int MonsterId { get; set; }
         public int WeaponId { get; set; }

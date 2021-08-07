@@ -2,6 +2,8 @@ using NUnit.Framework;
 using DataLayer;
 using BusinessLayer;
 using System.Linq;
+using System.Diagnostics;
+
 namespace UnitTests
 {
     public class RecordManagerTests
@@ -24,14 +26,14 @@ namespace UnitTests
             {
                 var selectedCustomers =
                 from r in db.Records
-                where r.HunterName == "testBot123"
+                where r.HunterName == testName
                 select r;
 
                 db.Records.RemoveRange(selectedCustomers);
                 db.SaveChanges();
             }
         }
-
+        
         [Test]
         public void WhenCreatingNewRecord_AssertThatNumberOfRecordsIncrements()
         {
@@ -57,6 +59,62 @@ namespace UnitTests
             Assert.That(details.MonsterId, Is.EqualTo(testMonsterID));
             Assert.That(details.WeaponId, Is.EqualTo(testWeaponID));
             Assert.That(details.HuntSucceeded, Is.EqualTo(testHuntSuccess));
+        }
+        [Test]
+        public void WhenUpdatingNewRecord_AssertChangesHaveBeenMade()
+        {
+            decimal newTime = (decimal)00.01;
+            int newMonsterId = 4;
+            int newWeaponId = 2;
+            bool newHuntSuccess = false;
+            decimal newSize = (decimal)3000.00;
+            int idToCheck;
+
+            using (var db = new MonsterHunterJournalDBContext())
+            {
+                _recordManager.AddNewRecord(testName, testTime, testMonsterID, testWeaponID, testHuntSuccess, testSize);
+                var record =
+                   from r in db.Records
+                   where r.HunterName == testName
+                   select r;
+                _recordManager.UpdateNewRecord(record.FirstOrDefault().RecordId, testName, newTime, newSize, newMonsterId, newWeaponId, newHuntSuccess);
+                idToCheck = record.FirstOrDefault().RecordId;
+            }
+            using (var db = new MonsterHunterJournalDBContext())
+            {
+                var detailsQuery =
+                from r in db.Records
+                where r.HunterName == testName
+                select r;
+                var details = detailsQuery.FirstOrDefault();
+                Assert.That(details.HunterName, Is.EqualTo(testName));
+                Assert.That(details.TimeTaken, Is.EqualTo(newTime));
+                Assert.That(details.RecordedMonsterSize, Is.EqualTo(newSize));
+                Assert.That(details.MonsterId, Is.EqualTo(newMonsterId));
+                Assert.That(details.WeaponId, Is.EqualTo(newWeaponId));
+                Assert.That(details.HuntSucceeded, Is.EqualTo(newHuntSuccess));
+            }
+        }
+        [Test]
+        public void WhenUpdatingNonExistentRecord_Return_false()
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            bool worked = _recordManager.UpdateNewRecord(999, testName, testTime, testSize, testMonsterID, testWeaponID, testHuntSuccess);
+            Assert.That(worked, Is.EqualTo(false));
+        }
+        [Test]
+        public void WhenDeletingRecord_ListOfRecordsGoesDownByOneIncrement()
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            _recordManager.AddNewRecord(testName, testTime, testMonsterID, testWeaponID, testHuntSuccess, testSize);
+            var record =
+               from r in db.Records
+               where r.HunterName == testName
+               select r;
+            int preCount = db.Records.ToList().Count();
+            _recordManager.DeleteNewRecord(record.FirstOrDefault().RecordId);
+            int postCount = db.Records.ToList().Count();
+            Assert.That(preCount - 1, Is.EqualTo(postCount));
         }
         [Test]
         public void AssertThatWhenSearchingRecordsByMonsterID_Return_ListOfRecordsAssociatedWithMonsterID()

@@ -48,7 +48,6 @@
                 <ComboBox
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Hint="Monster Type"
-                ItemsSource="{Binding ShortStringList}"
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 Width="256"
                 Margin="0,10,0,0">
@@ -56,7 +55,6 @@
                 <ComboBox
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Hint="Threat Level"
-                ItemsSource="{Binding ShortStringList}"
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 Width="256"
                 Margin="0,10,0,0">

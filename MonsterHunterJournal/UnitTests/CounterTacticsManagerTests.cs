@@ -32,7 +32,7 @@ namespace UnitTests
         }
         
         [Test]
-        [Ignore("Haven't created test monster to return default value")]
+        [Ignore("This Test case is taking too long to fix")]
         public void AssertThatGivenMonsterIDAndWeaponIDWithNoCounterTactic_Return_Default()
         {
             using var db = new MonsterHunterJournalDBContext();
@@ -90,6 +90,10 @@ namespace UnitTests
                 select ct;
 
             db.CounterTactics.RemoveRange(counterTactic);
+            var counterTactic2 =
+                from ct in db.CounterTactics
+                where ct.CRTest == _counterTacticTestDescription
+                select ct;
             db.Habits.RemoveRange(habit);
             db.SaveChanges();
         }
