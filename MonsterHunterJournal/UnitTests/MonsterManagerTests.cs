@@ -21,20 +21,21 @@ namespace UnitTests
             Assert.That(_mm.RetrieveAllMonsters().Count(), Is.EqualTo(count));
         }
 
-        //[Test]
-        //public void AssertThatGetNameByID_Returns_CorrectNameOfAilment()
-        //{
-        //    using var db = new MonsterHunterJournalDBContext();
-        //    var query = db.Ailments.Select(a => new { a.Name, a.AilmentId }).FirstOrDefault();
-        //    Assert.That(_am.GetAilmentNameFromID(query.AilmentId), Is.EqualTo(query.Name));
-        //}
-        //[Test]
-        //public void AssertThatGetIDByName_Returns_CorrectIDOfAilment()
-        //{
-        //    using var db = new MonsterHunterJournalDBContext();
-        //    var query = db.Ailments.Select(a => new { a.Name, a.AilmentId }).FirstOrDefault();
-        //    Assert.That(_am.getAilmentIDFromName(query.Name), Is.EqualTo(query.AilmentId));
-        //}
+        [Test]
+        public void AssertThatGetIDByName_Returns_CorrectNameOfMonster()
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            var query = db.Monsters.Select(a => new { a.Name, a.MonsterId }).FirstOrDefault();
+            Assert.That(_mm.GetMonsterIDByName(query.Name), Is.EqualTo(query.MonsterId));
+        }
+
+        [Test]
+        public void AssertThatGetNameByID_Returns_CorrectIDOfAilment()
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            var query = db.Monsters.Select(a => new { a.Name, a.MonsterId}).FirstOrDefault();
+            Assert.That(_mm.GetMonsterNameByID(query.MonsterId), Is.EqualTo(query.Name));
+        }
 
         [TearDown]
         public void TearDown()
