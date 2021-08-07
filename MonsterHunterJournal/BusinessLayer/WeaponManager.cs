@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using DataLayer;
 
@@ -25,6 +26,19 @@ namespace BusinessLayer
             using var db = new MonsterHunterJournalDBContext();
             int idToReturn = db.Weapons.Where(w => w.Name == weaponName).Select(w => w.WeaponId).FirstOrDefault();
             return idToReturn;
+        }
+
+        public string GetWeaponNameByID(int weaponId)
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            string weaponNameToReturn = db.Weapons.Where(w => w.WeaponId == weaponId).Select(w => w.Name).FirstOrDefault();
+            return weaponNameToReturn;
+        }
+
+        public Weapon GetWeaponById(int weaponId)
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            return db.Weapons.Where(w => w.WeaponId == weaponId).FirstOrDefault();
         }
     }
 }
