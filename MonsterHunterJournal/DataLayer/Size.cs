@@ -14,8 +14,8 @@ namespace DataLayer
 
         public int SizeId { get; set; }
         public string SizeName { get; set; }
-        public decimal? SizeFloor { get; set; }
-        public decimal? SizeCeiling { get; set; }
+        public decimal SizeFloor { get; set; }
+        public decimal SizeCeiling { get; set; }
 
         public virtual ICollection<Monster> Monsters { get; set; }
     }
