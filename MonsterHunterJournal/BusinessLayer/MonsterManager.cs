@@ -35,7 +35,7 @@ namespace BusinessLayer
                 , Type = type
                 , ThreatLevel = threatLevel
                 , PrimaryElementId = primaryElementId
-                , PrimaryAilmentId = primaryElementId
+                , PrimaryAilmentId = primaryAilmentId
                 , SizeId = sizeID };
             db.Monsters.Add(monster);
             db.SaveChanges();

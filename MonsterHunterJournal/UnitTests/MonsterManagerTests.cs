@@ -25,7 +25,7 @@ namespace UnitTests
         public void AssertThatRetrieveAllMonsters_Returns_CorrectNumberOfMonsters()
         {
             using var db = new MonsterHunterJournalDBContext();
-            int count = db.Monsters.ToList().Count();
+            int count = db.Monsters.ToList().Count;
             Assert.That(_mm.RetrieveAllMonsters().Count(), Is.EqualTo(count));
         }
         [Test]

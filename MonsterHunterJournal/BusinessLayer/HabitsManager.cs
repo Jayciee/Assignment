@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class HabitsAndCounterTacticsManager
+    public class HabitsManager
     {
         //string defaultDescription = "No one has added a countertactic for this habit yet";
 
@@ -22,12 +22,13 @@ namespace BusinessLayer
             return query.ToList();    
         }
 
-        public string GetCounterTactic(int weaponId, int habitId)
+        public void CreateNewHabit(string testHabit, string testDescription)
         {
             using var db = new MonsterHunterJournalDBContext();
-            return db.CounterTactics.Where(a => a.WeaponTypeId == weaponId && a.HabitId == habitId).Select(a => a.Description).FirstOrDefault();
-
-            
+            Habit habit = new Habit() { HabitName = testHabit, Description = testDescription };
+            db.Habits.Add(habit);
+            db.SaveChanges();
         }
+       
     }
 }

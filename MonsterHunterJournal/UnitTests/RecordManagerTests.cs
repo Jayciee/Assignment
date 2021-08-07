@@ -73,12 +73,12 @@ namespace UnitTests
             using (var db = new MonsterHunterJournalDBContext())
             {
                 //RemovingRecord
-                var selectedCustomers =
+                var record =
                 from r in db.Records
                 where r.HunterName == "testBot123"
                 select r;
 
-                db.Records.RemoveRange(selectedCustomers);
+                db.Records.RemoveRange(record);
                 db.SaveChanges();
             }
         }
