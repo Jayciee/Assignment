@@ -37,6 +37,11 @@ namespace UnitTests
             Assert.That(_mm.GetMonsterNameByID(query.MonsterId), Is.EqualTo(query.Name));
         }
 
+        public void AssertThatGetListOfHabitsFromMonsterID_Returns_ReturnsListOfHabits()
+        {
+            using var db = new MonsterHunterJournalDBContext();
+        }
+
         [TearDown]
         public void TearDown()
         {

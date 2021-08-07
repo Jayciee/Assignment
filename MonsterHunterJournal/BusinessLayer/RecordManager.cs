@@ -23,8 +23,13 @@ namespace BusinessLayer
                 
                 db.Records.Add(newRecord);
                 db.SaveChanges();
-                
             }
+        }
+
+        public List<Record> RetrieveRecordsFromByMonsterId(int id)
+        {
+            var db = new MonsterHunterJournalDBContext();
+            return db.Records.Where(a => a.MonsterId == id).ToList();
         }
 
     }
