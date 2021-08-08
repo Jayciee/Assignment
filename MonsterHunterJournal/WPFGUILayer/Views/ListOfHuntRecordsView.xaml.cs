@@ -28,10 +28,10 @@ namespace WPFGUILayer.Views
             InitializeComponent();
             _model = model;
             monsterNameLabel.Content = _mm.GetMonsterNameByID(_model.SelectedMonsterId);
-            PopulateHuntRecordsListView(sortByComboBox.SelectedItem.ToString(),orderByComboBox.SelectedItem.ToString());
+            PopulateHuntRecordsListView();
         }
 
-        private void PopulateHuntRecordsListView(string orderBy, string sortBy)
+        private void PopulateHuntRecordsListView()
         {
             var query = _rm.RetrieveRecordsByMonsterId(_model.SelectedMonsterId);
             List<listRec> populateList = new List<listRec>();
