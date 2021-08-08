@@ -27,7 +27,7 @@
                HorizontalAlignment="Center"></Label>
         <DockPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="1">
             <StackPanel>
-                <ListBox Name="monsterListListBox" Height="350" Width="380" Margin="10,20,0,0" HorizontalAlignment="Center">
+                <ListBox Name="monsterListListBox" Height="350" Width="380" Margin="10,20,0,0" HorizontalAlignment="Center" SelectionChanged="listBoxSelectionChanged">
                 </ListBox>
             </StackPanel>
         </DockPanel>
@@ -46,8 +46,8 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <TextBlock Text="Wavey Hand Monster" Margin ="0,5,0,10" FontWeight="ExtraBold" HorizontalAlignment="Center"></TextBlock>
-                        <Image Height="140"
+                        <TextBlock x:Name="monsterCardNameTextBlock" Text="Wavey Hand Monster" Margin ="0,5,0,10" FontWeight="ExtraBold" HorizontalAlignment="Center"></TextBlock>
+                        <Image x:Name="monsterCardImage" Height="140"
                                Width="200"
                                Stretch="Fill"
                                Grid.Row="1"
@@ -55,11 +55,14 @@
                         <StackPanel
                             Grid.Row="2"
                             Margin="8 5 8 0">
-                            <TextBlock
-                                Margin="5,5,5,5"
-                                TextWrapping="Wrap"
-                                VerticalAlignment="Center"
-                                Text="It's wavy arms are scary. It waves and waves and waves and waves and waves and waves and waves." />
+                            <ScrollViewer MaxHeight="60">
+                                <TextBlock x:Name="monsterCardDescriptionTextBlock"
+                                       Margin="5,5,5,5"
+                                       TextWrapping="Wrap"
+                                       VerticalAlignment="Center"
+                                       Text="It's wavy arms are scary. It waves and waves and waves and waves and waves and waves and waves." />
+                            </ScrollViewer>
+                            
                         </StackPanel>
                         <StackPanel Grid.Row="3" Height="90">
                             <Button x:Name="monsterDetailsBtn" Margin="0,5,0,5" Width="200" Content="Monster Details" Click="monsterDetailsBtn_Click"></Button>

@@ -15,6 +15,12 @@ namespace WPFGUILayer.ViewModels
             get { return _message; }
             set { _message = value; }
         }
+        private int _selectedMonsterId;
+        public int SelectedMonsterId
+        {
+            get { return _selectedMonsterId; }
+            set { _selectedMonsterId = value; }
+        }
         public object MainWindowContext
         {
             get { return _mainWindowContext; }

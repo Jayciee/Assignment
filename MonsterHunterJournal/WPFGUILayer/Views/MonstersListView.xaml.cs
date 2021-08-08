@@ -12,6 +12,7 @@ namespace WPFGUILayer.Views
     public partial class MonstersListView : UserControl
     {
         private MonsterManager _mm = new MonsterManager();
+        private MonsterListViewModel _model= new MonsterListViewModel();
         public MonstersListView()
         {
             InitializeComponent();
@@ -32,12 +33,26 @@ namespace WPFGUILayer.Views
 
         private void monsterDetailsBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            ((MainWindow)Application.Current.MainWindow).DataContext = new MonsterDetailsView();
+            var modelToPass = new MonsterDetailsViewModel(_model.SelectedMonsterId);
+            ((MainWindow)Application.Current.MainWindow).DataContext = new MonsterDetailsView(modelToPass);
         }
 
         private void huntDetailsBtn_Click(object sender, RoutedEventArgs e)
         {
             ((MainWindow)Application.Current.MainWindow).DataContext = new ListOfHuntRecordsView();
+        }
+
+        private void listBoxSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var item = monsterListListBox.SelectedItem.ToString();
+            Debug.WriteLine(item); //Returns Monster Name
+            _model.SelectedMonsterId = _mm.GetMonsterIDByName(item);
+            PopulateMonsterCard(_model.SelectedMonsterId);
+        }
+        private void PopulateMonsterCard(int monsterId)
+        {
+            monsterCardNameTextBlock.Text = _mm.GetMonsterNameByID(monsterId);
+            monsterCardDescriptionTextBlock.Text = _mm.GetMonsterDescriptionByID(monsterId);
         }
     }
 }
