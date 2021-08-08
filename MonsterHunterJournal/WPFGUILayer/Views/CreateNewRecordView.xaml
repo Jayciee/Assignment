@@ -25,6 +25,7 @@
                 <ImageBrush ImageSource="/WPFGUILayer;component/Images/MHBackground.jpg"></ImageBrush>
             </StackPanel.Background>
         </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Background="black" Opacity="0.4"/>
         <Label Grid.Column="1"
                Foreground="White"
                FontFamily="{StaticResource MonFont}"
@@ -72,7 +73,7 @@
                     materialDesign:HintAssist.Hint="Seconds"
                     Margin="20,0,0,0"/>
             </StackPanel>
-        <Label HorizontalAlignment="Center">Hunt Succeeded?</Label>
+        <Label HorizontalAlignment="Center" Foreground="White">Hunt Succeeded?</Label>
             <ListBox
                 HorizontalAlignment="Center"
                 Foreground="White"
@@ -87,6 +88,7 @@
                     Content="Failed" Selected="failedListBoxItem_Selected" />
             </ListBox>
             <TextBox x:Name="recordedSizeTextBox"
+                     Foreground="White"
                      Visibility="Collapsed"
                      Width="250"  
                      HorizontalAlignment="Center" 
@@ -94,10 +96,11 @@
                      Margin="0,10,0,0">
             </TextBox>
             <Button
+                Background="DarkKhaki"
                 Style="{StaticResource MaterialDesignRaisedButton}"
                 Margin="0,20,0,0"
-                Height="40"
-                Width="100"
+                Width="200"
+                Height="80"
                 materialDesign:ButtonAssist.CornerRadius="10"
                 ToolTip="MaterialDesignRaisedButton with Round Corners">
                 <TextBlock x:Name="submitBtn" Text="Submit" />
