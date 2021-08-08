@@ -53,27 +53,37 @@
                 <DropShadowBitmapEffect Color="black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.9" />
             </DockPanel.BitmapEffect>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="newHunterRecordLinkBtn"
-                        FontFamily="{StaticResource MonFont}"
-                        Margin="0,0,10,0"
-                        Content="Add New Hunt Record"
-                        Click="newHunterRecordBtn_Click">
-                    <Button.BitmapEffect>
-                        <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
-                    </Button.BitmapEffect>
-                </Button>
                 <Button x:Name="monsterListLinkBtn" 
                         FontFamily="{StaticResource MonFont}"
-                        Margin="0,0,10,0"
+                        Margin="0,0,30,0"
+                        Background="DarkGoldenrod"
+                        FontSize="25"
+                        Height="60"
                         Content="Monster List" 
                         Click="monsterListLinkBtn_Click">
                     <Button.BitmapEffect>
                         <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
                     </Button.BitmapEffect>
                 </Button>
+                <Button x:Name="newHunterRecordLinkBtn"
+                        FontFamily="{StaticResource MonFont}"
+                        Margin="0,0,30,0"
+                        Background="DarkKhaki"
+                        FontSize="25"
+                        Height="60"
+                        Content="Add New Hunt Record"
+                        Click="newHunterRecordBtn_Click">
+                    <Button.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+                    </Button.BitmapEffect>
+                </Button>
+                
                 <Button x:Name="newWeaponLinkBtn"
                         FontFamily="{StaticResource MonFont}"
-                        Margin="0,0,10,0"
+                        Margin="0,0,30,0"
+                        Background="DarkOrange"
+                        FontSize="25"
+                        Height="60"
                         Content="Add New Weapon" 
                         Click="newWeaponLinkBtn_Click">
                     <Button.BitmapEffect>
@@ -82,7 +92,10 @@
                 </Button>
                 <Button x:Name="newMonsterEntryLinkBtn"
                         FontFamily="{StaticResource MonFont}"
-                        Margin="0,0,10,0"
+                        Margin="0,0,30,0"
+                        Background="BurlyWood"
+                        FontSize="25"
+                        Height="60"
                         Content="Add New Monster" 
                         Click="newMonsterEntryLinkBtn_Click">
                     <Button.BitmapEffect>

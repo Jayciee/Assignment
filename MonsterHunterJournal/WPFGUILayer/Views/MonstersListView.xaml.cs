@@ -45,6 +45,7 @@ namespace WPFGUILayer.Views
 
         private void listBoxSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            monsterCard.Visibility = Visibility.Visible;
             var item = monsterListListBox.SelectedItem.ToString();
             Debug.WriteLine(item); //Returns Monster Name
             _model.SelectedMonsterId = _mm.GetMonsterIDByName(item);

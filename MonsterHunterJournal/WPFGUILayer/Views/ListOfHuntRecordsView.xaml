@@ -15,32 +15,33 @@
     <Grid>
         
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="800"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2">
+        
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="3" >
             <StackPanel.Background>
                 <ImageBrush ImageSource="/WPFGUILayer;component/Images/MHBackground.jpg"></ImageBrush>
             </StackPanel.Background>
         </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background= "Wheat" Opacity="0.7" Margin="80,0,80,0"/>
         <Label x:Name="monsterNameLabel"
-               Foreground="White"
                FontFamily="{StaticResource MonFont}"
                Grid.Row="0" 
                Content="(MonsterName)" 
                FontSize="30" 
                Margin="0,10,0,0"
                HorizontalAlignment="Center"></Label>
-        <DockPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="1">
+        <DockPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="1" HorizontalAlignment="Center">
             <StackPanel >
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Sort by:" Foreground="white"></Label>
+                    <Label Content="Sort by:" ></Label>
                     <StackPanel>
                         <ComboBox x:Name="sortByComboBox"
-                                  Foreground="White"
+                                  
                             Margin="20,0,0,0">
                             <ComboBoxItem
                                 IsSelected="True"
@@ -53,6 +54,7 @@
                     
                     <StackPanel>
                         <ComboBox x:Name="orderByComboBox"
+                                  
                             Margin="20,0,0,0">
                             <ComboBoxItem
                                 Content="Ascending" />
@@ -73,7 +75,7 @@
                 <ListView Name="HunterRecordListView">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Hunter" DisplayMemberBinding="{Binding HunterName}" Width="110"/>
+                            <GridViewColumn Header="Hunter" DisplayMemberBinding="{Binding HunterName}" Width="110"></GridViewColumn>
                             <GridViewColumn Header="Time" DisplayMemberBinding="{Binding TimeTaken}" Width="110"/>
                             <GridViewColumn Header="Monster Size" DisplayMemberBinding="{Binding RecordedMonsterSize}" Width="140"/>
                             <GridViewColumn Header="Weapon Type" DisplayMemberBinding="{Binding WeaponType}" Width="150"/>
