@@ -37,7 +37,9 @@
                             <ComboBoxItem
                                 Content="MonsterSize" />
                         </ComboBox>
+                        
                     </StackPanel>
+                    
                     <StackPanel>
                         <ComboBox x:Name="orderByComboBox"
                             Margin="20,0,0,0"
@@ -57,6 +59,7 @@
                             materialDesign:ComboBoxAssist.ClassicMode="{Binding ElementName=ClassicModeCheckBox, Path=IsChecked}">
                         </ComboBox>
                     </StackPanel>
+                    <Button Name="sortOrFilterBtn" Margin="10,0,0,0" Content="Sort" Click="sortOrFilterBtn_Click"></Button>
                 </StackPanel>
                 <ListView Name="HunterRecordListView">
                     <ListView.View>

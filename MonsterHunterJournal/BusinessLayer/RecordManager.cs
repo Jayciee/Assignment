@@ -48,7 +48,7 @@ namespace BusinessLayer
         {
             var db = new MonsterHunterJournalDBContext();
             var query = from r in db.Records
-                        where r.RecordedMonsterSize == id
+                        where r.MonsterId == id
                         orderby r.TimeTaken descending
                         select r;
             return query.ToList();
@@ -57,7 +57,7 @@ namespace BusinessLayer
         {
             var db = new MonsterHunterJournalDBContext();
             var query = from r in db.Records
-                        where r.RecordedMonsterSize == id
+                        where r.MonsterId == id
                         orderby r.TimeTaken ascending
                         select r;
             return query.ToList();
@@ -66,7 +66,7 @@ namespace BusinessLayer
         {
             var db = new MonsterHunterJournalDBContext();
             var query = from r in db.Records
-                        where r.RecordedMonsterSize == id
+                        where r.MonsterId == id
                         orderby r.RecordedMonsterSize descending
                         select r;
             return query.ToList();
@@ -75,7 +75,7 @@ namespace BusinessLayer
         {
             var db = new MonsterHunterJournalDBContext();
             var query = from r in db.Records
-                        where r.RecordedMonsterSize == id
+                        where r.MonsterId == id
                         orderby r.RecordedMonsterSize ascending
                         select r;
             return query.ToList();
