@@ -24,6 +24,8 @@
                 <ImageBrush ImageSource="/WPFGUILayer;component/Images/MHBackground.jpg"></ImageBrush>
             </StackPanel.Background>
         </StackPanel>
+        <StackPanel Grid.Row="1" Background="Black" Opacity="0.4"/>
+        
         <Label Grid.Row="0" 
                FontFamily="{StaticResource MonFont}"
                FontSize="30" 
@@ -39,6 +41,7 @@
                        Grid.Row="1"
                        Source="../Images/MHLogo.png"/>
                 <Button HorizontalAlignment="Center" 
+                        Background="DarkKhaki"
                         VerticalAlignment="Center" 
                         Content="Add New Image" 
                         Margin="0,25,0,0">
@@ -72,7 +75,8 @@
                 <TextBox
                     TextWrapping="Wrap"
                     VerticalAlignment="Stretch"
-                    Background="FloralWhite"
+                    Foreground="White"
+                    Background="SaddleBrown"
                     MaxWidth="280"
                     AcceptsReturn="True"
                     VerticalScrollBarVisibility="Auto"
@@ -85,6 +89,7 @@
             
         </StackPanel>
         <Button 
+            Background="DarkOrange"
             Grid.Row="2"
             Width="200"
             Height="80"
