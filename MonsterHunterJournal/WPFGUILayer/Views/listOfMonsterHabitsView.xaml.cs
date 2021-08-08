@@ -1,28 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WPFGUILayer.ViewModels;
+using BusinessLayer;
+using System.Diagnostics;
 
 namespace WPFGUILayer.Views
 {
     /// <summary>
     /// Interaction logic for listOfMonsterHabitsView.xaml
     /// </summary>
-    public partial class listOfMonsterHabitsView : UserControl
+    public partial class ListOfMonsterHabitsView : UserControl
     {
-        public listOfMonsterHabitsView()
+        MonsterDetailsViewModel _model;
+        public ListOfMonsterHabitsView()
         {
             InitializeComponent();
+        }
+        public ListOfMonsterHabitsView(MonsterDetailsViewModel model) // This is using monsterdetaislveiwmodel as a placeholder as it doesn't have it's own model yet
+        {
+            InitializeComponent();
+            _model = model;
         }
     }
 }

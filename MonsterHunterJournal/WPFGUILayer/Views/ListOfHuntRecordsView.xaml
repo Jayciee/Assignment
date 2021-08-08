@@ -12,14 +12,13 @@
     </UserControl.DataContext>
     <Grid Background="AliceBlue">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="500"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="800"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" 
+        <Label x:Name="monsterNameLabel" Grid.Row="0" 
                Content="(MonsterName)" 
                FontSize="30" 
                Margin="0,10,0,0"
@@ -29,7 +28,7 @@
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Sort by:"></Label>
                     <StackPanel>
-                        <ComboBox
+                        <ComboBox x:Name="sortByComboBox"
                             Margin="20,0,0,0"
                             materialDesign:ComboBoxAssist.ClassicMode="{Binding ElementName=ClassicModeCheckBox, Path=IsChecked}">
                             <ComboBoxItem
@@ -37,20 +36,16 @@
                                 Content="TimeTaken" />
                             <ComboBoxItem
                                 Content="MonsterSize" />
-                            <ComboBoxItem
-                                Content="WeaponRarity" />
-                            <ComboBoxItem
-                                Content="WeaponType" />
                         </ComboBox>
                     </StackPanel>
                     <StackPanel>
-                        <ComboBox
+                        <ComboBox x:Name="orderByComboBox"
                             Margin="20,0,0,0"
                             materialDesign:ComboBoxAssist.ClassicMode="{Binding ElementName=ClassicModeCheckBox, Path=IsChecked}">
                             <ComboBoxItem
-                                IsSelected="True"
                                 Content="Ascending" />
                             <ComboBoxItem
+                                IsSelected="True"
                                 Content="Descending" />
                         </ComboBox>
                     </StackPanel>
@@ -63,36 +58,17 @@
                         </ComboBox>
                     </StackPanel>
                 </StackPanel>
-                <ListView Name="HunterRecordListView"></ListView>
-            </StackPanel>
-        </DockPanel>
-        <DockPanel Grid.Column="1" 
-                   Grid.Row="1" 
-                   Grid.RowSpan="1" 
-                   Grid.ColumnSpan="1"
-                   >
-            <StackPanel Margin="0,20,0,0">
-                <materialDesign:Card
-                    Width="250">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" 
-                                   Text="HunterRecordID : Default" 
-                                   Margin ="0,5,0,10" 
-                                   FontWeight="ExtraBold" 
-                                   HorizontalAlignment="Center"></TextBlock>
-                        <StackPanel Grid.Row="1">
-                            <Label Name="hunterNameLabel" Margin="5" FontSize="10" Content="Huntername: Default"></Label>
-                            <Label Name="timeTakenLabel" Margin="5" FontSize="10" Content="TimeTaken: Default"></Label>
-                            <Label Name="recordedMonsterSizeLabel" Margin="5" FontSize="10" Content="RecordedMonsterSize: Default"></Label>
-                            <Label Name="weaponUsedLabel" Margin="5" FontSize="10" Content="WeaponUsed: Default"></Label>
-                            <Label Name="huntStatusLabel" Margin="5" FontSize="10" Content="HuntStatus: Default"></Label>
-                        </StackPanel>
-                    </Grid>
-                </materialDesign:Card>
+                <ListView Name="HunterRecordListView">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Hunter" DisplayMemberBinding="{Binding HunterName}" Width="110"/>
+                            <GridViewColumn Header="Time" DisplayMemberBinding="{Binding TimeTaken}" Width="110"/>
+                            <GridViewColumn Header="Monster Size" DisplayMemberBinding="{Binding RecordedMonsterSize}" Width="140"/>
+                            <GridViewColumn Header="Weapon Type" DisplayMemberBinding="{Binding WeaponType}" Width="150"/>
+                            <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Status}" Width="110"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
             </StackPanel>
         </DockPanel>
     </Grid>

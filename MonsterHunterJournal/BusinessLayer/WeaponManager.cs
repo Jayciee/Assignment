@@ -40,5 +40,14 @@ namespace BusinessLayer
             using var db = new MonsterHunterJournalDBContext();
             return db.Weapons.Where(w => w.WeaponId == weaponId).FirstOrDefault();
         }
+        public string GetWeaponTypeNameByWeaponID(int weaponId) // Needs unit test
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            var query = from w in db.Weapons
+                        join wt in db.WeaponTypes on w.WeaponTypeId equals wt.WeaponTypeId
+                        where w.WeaponId == weaponId
+                        select wt.TypeName;
+            return query.FirstOrDefault();
+        }
     }
 }

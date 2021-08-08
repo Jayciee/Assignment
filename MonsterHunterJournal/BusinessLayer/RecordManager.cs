@@ -39,12 +39,47 @@ namespace BusinessLayer
             }
         }
 
-        public List<Record> RetrieveRecordsFromByMonsterId(int id)
+        public List<Record> RetrieveRecordsByMonsterId(int id)
         {
             var db = new MonsterHunterJournalDBContext();
             return db.Records.Where(a => a.MonsterId == id).ToList();
         }
-
+        public List<Record> RetrieveRecordsByMonsterIdSortedByTimeDesc(int id) // Needs unit Test
+        {
+            var db = new MonsterHunterJournalDBContext();
+            var query = from r in db.Records
+                        where r.RecordedMonsterSize == id
+                        orderby r.TimeTaken descending
+                        select r;
+            return query.ToList();
+        }
+        public List<Record> RetrieveRecordsByMonsterIdSortedByTimeAsc(int id) // Needs unit Test
+        {
+            var db = new MonsterHunterJournalDBContext();
+            var query = from r in db.Records
+                        where r.RecordedMonsterSize == id
+                        orderby r.TimeTaken ascending
+                        select r;
+            return query.ToList();
+        }
+        public List<Record> RetrieveRecordsByMonsterIdSortedBySizeDesc(int id) // Needs unit Test
+        {
+            var db = new MonsterHunterJournalDBContext();
+            var query = from r in db.Records
+                        where r.RecordedMonsterSize == id
+                        orderby r.RecordedMonsterSize descending
+                        select r;
+            return query.ToList();
+        }
+        public List<Record> RetrieveRecordsByMonsterIdSortedBySizeAsc(int id) // Needs unit Test
+        {
+            var db = new MonsterHunterJournalDBContext();
+            var query = from r in db.Records
+                        where r.RecordedMonsterSize == id
+                        orderby r.RecordedMonsterSize ascending
+                        select r;
+            return query.ToList();
+        }
         public bool UpdateNewRecord(int recordId,string hunterName, decimal newTime, decimal newSize, int newMonsterId, int newWeaponId, bool newHuntSuccess)
         {
             using (var db = new MonsterHunterJournalDBContext())

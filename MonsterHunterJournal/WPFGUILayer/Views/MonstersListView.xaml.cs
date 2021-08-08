@@ -39,7 +39,8 @@ namespace WPFGUILayer.Views
 
         private void huntDetailsBtn_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Application.Current.MainWindow).DataContext = new ListOfHuntRecordsView();
+            var modelToPass = new ListOfHuntRecordsViewModel(_model.SelectedMonsterId);
+            ((MainWindow)Application.Current.MainWindow).DataContext = new ListOfHuntRecordsView(modelToPass);
         }
 
         private void listBoxSelectionChanged(object sender, SelectionChangedEventArgs e)

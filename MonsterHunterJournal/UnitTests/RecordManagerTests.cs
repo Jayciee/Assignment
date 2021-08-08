@@ -122,7 +122,7 @@ namespace UnitTests
             using var db = new MonsterHunterJournalDBContext();
             int id = db.Monsters.Select(a => a.MonsterId).FirstOrDefault();
             var query = db.Records.Where(a => a.MonsterId == id);
-            Assert.That(_recordManager.RetrieveRecordsFromByMonsterId(id).Where(a=>a.MonsterId==id).ToList().Count,Is.EqualTo(query.ToList().Count));
+            Assert.That(_recordManager.RetrieveRecordsByMonsterId(id).Where(a=>a.MonsterId==id).ToList().Count,Is.EqualTo(query.ToList().Count));
         }
 
         [TearDown]

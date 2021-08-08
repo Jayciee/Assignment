@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace WPFGUILayer.ViewModels
 {
-    class ListOfHuntRecordsViewModel
+    public class ListOfHuntRecordsViewModel
     {
-        private string _message;
-        public string Message
+        private int _selectedMonsterId;
+        public int SelectedMonsterId
         {
-            get { return _message; }
-            set { _message = value; }
+            get { return _selectedMonsterId; }
+            set { _selectedMonsterId = value; }
         }
         public ListOfHuntRecordsViewModel()
         {
-            _message = "Model Connected";
+
         }
-        public ListOfHuntRecordsViewModel(string message)
+        public ListOfHuntRecordsViewModel(int monsterId)
         {
-            _message = message;
+            _selectedMonsterId = monsterId;
         }
     }
 }
