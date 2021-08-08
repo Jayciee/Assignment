@@ -14,7 +14,7 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Height="600" Width="1000">
+        Height="860" Width="1280">
     <Window.Resources>
         <DataTemplate x:Name="newHunterRecordTemplate" DataType="(x:Type viewmodels:NewHunterRecordViewModel)">
             <views:CreateNewRecordView DataContext="{Binding}" />
@@ -24,6 +24,10 @@
         </DataTemplate>
     </Window.Resources>
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/WPFGUILayer;component/Images/MHRiseMainBackground.jpg"></ImageBrush>
+        </Grid.Background>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -32,30 +36,59 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="160"></RowDefinition>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <DockPanel Background="Gray" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5">
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="4" Background="Black" Opacity="0.4">
+            
+        </StackPanel>
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5">
+            <DockPanel.Background>
+                <ImageBrush ImageSource="/WPFGUILayer;component/Images/MHBorder.jpg"></ImageBrush>
+            </DockPanel.Background>
+            <DockPanel.BitmapEffect>
+                <DropShadowBitmapEffect Color="white" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+            </DockPanel.BitmapEffect>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="newHunterRecordLinkBtn"
+                        FontFamily="{StaticResource MonFont}"
                         Margin="0,0,10,0"
-                        Content="AddHunterRecord"
-                        Click="newHunterRecordBtn_Click"></Button>
+                        Content="Add New Hunt Record"
+                        Click="newHunterRecordBtn_Click">
+                    <Button.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+                    </Button.BitmapEffect>
+                </Button>
                 <Button x:Name="monsterListLinkBtn" 
+                        FontFamily="{StaticResource MonFont}"
                         Margin="0,0,10,0"
-                        Content="MonsterList" 
-                        Click="monsterListLinkBtn_Click"></Button>
+                        Content="Monster List" 
+                        Click="monsterListLinkBtn_Click">
+                    <Button.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+                    </Button.BitmapEffect>
+                </Button>
                 <Button x:Name="newWeaponLinkBtn"
+                        FontFamily="{StaticResource MonFont}"
                         Margin="0,0,10,0"
-                        Content="AddNewWeapon" 
-                        Click="newWeaponLinkBtn_Click"></Button>
+                        Content="Add New Weapon" 
+                        Click="newWeaponLinkBtn_Click">
+                    <Button.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+                    </Button.BitmapEffect>
+                </Button>
                 <Button x:Name="newMonsterEntryLinkBtn"
+                        FontFamily="{StaticResource MonFont}"
                         Margin="0,0,10,0"
-                        Content="NewMonsterEntry" 
-                        Click="newMonsterEntryLinkBtn_Click"></Button>
+                        Content="Add New Monster" 
+                        Click="newMonsterEntryLinkBtn_Click">
+                    <Button.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+                    </Button.BitmapEffect>
+                </Button>
             </StackPanel>
         </DockPanel>
         <ContentControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="4" Content="{Binding}"/>

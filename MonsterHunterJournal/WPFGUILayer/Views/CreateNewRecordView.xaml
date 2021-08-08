@@ -10,7 +10,7 @@
     <UserControl.DataContext>
         <local:NewHunterRecordViewModel/>
     </UserControl.DataContext>
-    <Grid Background="AliceBlue">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="600"/>
@@ -21,6 +21,7 @@
             <RowDefinition Height="380"/>
         </Grid.RowDefinitions>
         <Label Grid.Column="1"
+               FontFamily="{StaticResource MonFont}"
                Grid.Row="0" 
                FontSize="40" 
                Content="New Hunter Record" 

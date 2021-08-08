@@ -5,10 +5,14 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
-
+	
   <ItemGroup>
+    <None Remove="Fonts\MonsterHunterFont.ttf" />
+    <None Remove="Images\MHBackground.jpg" />
+    <None Remove="Images\MHBorder.jpg" />
     <None Remove="Images\MHLogo.jpg" />
     <None Remove="Images\MHLogo.png" />
+    <None Remove="Images\MHRiseMainBackground.jpg" />
     <None Remove="Images\Vector.jpg" />
   </ItemGroup>
 
@@ -23,8 +27,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fonts\MonsterHunterFont.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MHBackground.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MHBorder.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\MHLogo.jpg" />
     <Resource Include="Images\MHLogo.png" />
+    <Resource Include="Images\MHRiseMainBackground.jpg" />
     <Resource Include="Images\Vector.jpg" />
   </ItemGroup>
 </Project>

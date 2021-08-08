@@ -10,7 +10,7 @@
     <UserControl.DataContext>
         <local:MonsterDetailsViewModel/>
     </UserControl.DataContext>
-    <Grid Background="AliceBlue" >
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
             <RowDefinition/>
@@ -21,6 +21,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label x:Name="monsterNameLabel" Grid.Row="0"
+               FontFamily="{StaticResource MonFont}"
                Grid.ColumnSpan="2"
                Content="(MonsterName)" 
                FontSize="30" 

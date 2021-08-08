@@ -10,7 +10,7 @@
     <UserControl.DataContext>
         <local:NewMonsterEntryViewModel/>
     </UserControl.DataContext>
-    <Grid Background="AliceBlue">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -20,6 +20,7 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" 
+               FontFamily="{StaticResource MonFont}"
                FontSize="30" 
                Content="New Monster" 
                HorizontalAlignment="Center"></Label>
