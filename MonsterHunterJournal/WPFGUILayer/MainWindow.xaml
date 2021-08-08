@@ -50,7 +50,7 @@
                 <ImageBrush ImageSource="/WPFGUILayer;component/Images/MHBorder.jpg"></ImageBrush>
             </DockPanel.Background>
             <DockPanel.BitmapEffect>
-                <DropShadowBitmapEffect Color="white" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+                <DropShadowBitmapEffect Color="black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.9" />
             </DockPanel.BitmapEffect>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="newHunterRecordLinkBtn"

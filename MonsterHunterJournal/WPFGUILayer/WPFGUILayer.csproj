@@ -14,6 +14,7 @@
     <None Remove="Images\MHLogo.png" />
     <None Remove="Images\MHRiseMainBackground.jpg" />
     <None Remove="Images\Vector.jpg" />
+    <None Remove="Images\Woodbackground.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,5 +41,6 @@
     <Resource Include="Images\MHLogo.png" />
     <Resource Include="Images\MHRiseMainBackground.jpg" />
     <Resource Include="Images\Vector.jpg" />
+    <Resource Include="Images\Woodbackground.jpg" />
   </ItemGroup>
 </Project>

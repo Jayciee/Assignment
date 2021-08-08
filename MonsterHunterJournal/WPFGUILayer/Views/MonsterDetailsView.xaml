@@ -20,7 +20,13 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="2">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/WPFGUILayer;component/Images/MHBackground.jpg"></ImageBrush>
+            </StackPanel.Background>
+        </StackPanel>
         <Label x:Name="monsterNameLabel" Grid.Row="0"
+               Foreground="white"
                FontFamily="{StaticResource MonFont}"
                Grid.ColumnSpan="2"
                Content="(MonsterName)" 
@@ -48,15 +54,17 @@
                     Text="" />
             <Button x:Name="editMonsterDescriptionBtn" Content ="Edit Description" Margin="0,10,0,0" Width="250"></Button>
         </StackPanel>
-        
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Background="Black" Opacity="0.2"></StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
             <TextBox x:Name="monsterTypeTextBox"
+                     Foreground="white"
                      Width="250"  
                      HorizontalAlignment="Center" 
                      materialDesign:HintAssist.Hint="Monster Type"
                      Margin="0,10,0,10"/>
 
             <ComboBox x:Name="elementComboBox"
+                      Foreground="white"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Hint="Element"
                 ItemsSource="{Binding ShortStringList}"
@@ -64,6 +72,7 @@
                 Width="256"
                 Margin="0,10,0,0"/>
             <ComboBox x:Name="ailmentComboBox"
+                      Foreground="White"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Hint="Ailment"
                 ItemsSource="{Binding ShortStringList}"
