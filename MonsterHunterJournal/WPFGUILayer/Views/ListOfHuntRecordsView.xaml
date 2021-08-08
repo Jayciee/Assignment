@@ -27,7 +27,7 @@
                 <ImageBrush ImageSource="/WPFGUILayer;component/Images/MHBackground.jpg"></ImageBrush>
             </StackPanel.Background>
         </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background= "Wheat" Opacity="0.7" Margin="80,0,80,0"/>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background= "Black" Opacity="0.7" Margin="80,0,80,0"/>
         <Label x:Name="monsterNameLabel"
                FontFamily="{StaticResource MonFont}"
                Grid.Row="0" 
@@ -41,7 +41,7 @@
                     <Label Content="Sort by:" ></Label>
                     <StackPanel>
                         <ComboBox x:Name="sortByComboBox"
-                                  
+                            Foreground="White"       
                             Margin="20,0,0,0">
                             <ComboBoxItem
                                 IsSelected="True"
@@ -54,7 +54,7 @@
                     
                     <StackPanel>
                         <ComboBox x:Name="orderByComboBox"
-                                  
+                                  Foreground="White"
                             Margin="20,0,0,0">
                             <ComboBoxItem
                                 Content="Ascending" />
@@ -70,7 +70,11 @@
                             Visibility="Collapsed">
                         </ComboBox>
                     </StackPanel>
-                    <Button Name="sortOrFilterBtn" Margin="10,0,0,0" Content="Sort" Click="sortOrFilterBtn_Click"></Button>
+                    <Button Name="sortOrFilterBtn" 
+                            Margin="10,0,0,0" 
+                            Content="Sort" 
+                            Click="sortOrFilterBtn_Click"
+                            Background="DarkOrange"></Button>
                 </StackPanel>
                 <ListView Name="HunterRecordListView">
                     <ListView.View>

@@ -81,8 +81,10 @@
                 x:Name="huntSucceededRadioButton">
                 <ListBoxItem x:Name="succeedListBoxItem"
                              Foreground="White"
+                             Background="DarkOrange"
                     Content="Succeeded" Selected="succeedListBoxItem_Selected" />
                 <ListBoxItem x:Name="failedListBoxItem"
+                             Background="DarkGoldenrod"
                              Foreground="White"
                     IsSelected="True"
                     Content="Failed" Selected="failedListBoxItem_Selected" />
