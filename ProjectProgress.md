@@ -14,6 +14,12 @@
 
 [Sprint 4](#sprint-4)
 
+[Sprint 5](#sprint-5)
+
+[Sprint 6](#sprint-6)
+
+[Sprint 7](#sprint-7)
+
 ### Introduction
 
 This project is a Monster Hunter Journal based on the videogame series "Monster Hunter". The application is a journal that provides users with the ability to document "hunts" that they have attempted on monsters in the game. The purpose of these hunting records is to allow for users to review tactics that they have previously employed and compare the methods to determine of which are the most effective. Alternatively the application can also be used simply to document their experience and attempts with monster hunts.  
@@ -182,7 +188,7 @@ A lot of time was spent learning new technology. Most of the user stories have a
 
 ### Sprint 4
 
-The goal of this sprint are to: 
+The goals of this sprint are to: 
 
 - Put in the remaining work for User Story 4.3. 
 - Complete Epic 2 which involves User Stories 2.1 and 2.2. 
@@ -193,3 +199,129 @@ The completion of these Goals will finish laying the foundations for the rest of
 
 ![ProjectBoardSprint4](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard4Start.png)
 
+**SprintBoard(End)**
+
+![ProjectBoardSprint4](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard4End.png)
+
+**RetroSpective**
+
+This sprint was difficult. I did not complete the user stories I had set out to do due to a major blocker with my view connections. I previously had not employed models to connect views and had just used views directly. This lead to issues with passing data between views and I spent the majority of the sprint re-factoring my window connections. This meant that while I eventually completed User Story 4.3 I failed to complete Epic 2 that I had originally intended to during the sprint.
+
+*What did we do well, that if we don't discuss might forget?*
+
+- Diligently worked through bugs and the major blocker preventing me from connecting the Windows together for User Story 4.3
+
+*What did we learn?*
+
+- That when possible you should always use the industry standard method or an existing methodology to create software. Using rushed methods will lead to poor foundations which will need to be remodelled later anyway.
+
+*What should we do differently next time?*
+
+- Try to follow existing methodology or use proper methods when developing software instead of haphazard methods to band-aid issues.
+
+*What still puzzles us? What potential problems do we foresee?*
+
+- As a side task that I was more curious about was the addition of custom fonts into the application. I had attempted to add it during my lunch-break as a break from the window connection blocker I was having an issue with and I was struggling to get it working. This isn't a particularly significant problem as it is more to do with GUI theme and decoration in User Story 7.1 which is a stretch goal.
+
+### Sprint 5
+
+The goals of this sprint are to:
+
+- Implement the functionality and finish epics 1,2 and 3.
+
+With the completion of the window connection and the base GUI complete it is now possible to add and finish implementing all major epics vital to delivering an MVP.
+
+**SprintBoard(Start)**
+
+![ProjectBoardSprint5](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard5Start.png)
+
+**SprintBoard(End)**
+
+![ProjectBoardSprint5](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard5End.png)
+
+**RetroSpective**
+
+This sprint was done counterintuitively. The majority of my user stories were left in-complete due to a complete tangent in code developed. I had attempted TDD and spent most of the day developing business logic to implement the fulfil the requirements in the user stories I set out to accomplish for the day. Unfortunately I had spent the entire sprint creating tests then creating the methods for those tests. While TDD is effective at creating a suite of tests and concrete methods I can rely on it is incredibly time-consuming.
+
+*What did we do well, that if we don't discuss might forget?*
+
+- Unit tests are mostly complete for all major functionality
+
+*What did we learn?*
+
+- It is unnecessary to unit test every single method and attempting to predict which methods will be needed before even attempting to implement them into the GUI. 
+- Excessive creation of unit tests will lead to great lack of functionality developed and implemented in other areas.
+
+*What should we do differently next time?*
+
+- Using TDD is appropriate for parts of the functionality. Instead of attempting use this methodology for potential piece for the application it is better to focus on the absolute necessary ones required to fulfilling the user requirements set out in the sprint.
+
+*What still puzzles us? What potential problems do we foresee?*
+
+- Due to a significant amount of time being wasted in this sprint, I may struggle later to implement all epics required to deliver an MVP.
+
+### Sprint 6
+
+The goals of this sprint are to:
+
+- Carry on with implementing the epics 1,2,3 laid out previously in Sprint 7.
+- With the stretch goal of implementing themes and backgrounds for User Story 7.1 in time for the presentation before the hand-in.
+
+**SprintBoard(Start)**
+
+![ProjectBoardSprint6](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard6Start.png)
+
+**SprintBoard(End)**
+
+![ProjectBoardSprint6](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard6End.png)
+
+**RetroSpective**
+
+Overall this sprint was a big success and put me back on target for delivering an MVP. All user stories set out in this sprint were completed including all the sprints that were previously laid out from Sprint 5.
+
+*What did we do well, that if we don't discuss might forget?*
+
+- Focusing purely on fulfilling the User requirements for the user stories lead to significantly more visible progress throughout the sprint.
+
+*What did we learn?*
+
+- Carrying out the absolute minimum functionality required is a good measure of progress.
+
+*What should we do differently next time?*
+
+- Potentially better spread out the user stories or divide them more evenly throughout the other sprints. In this sprint alone I completed 9 user stories.
+- Better plan out the user stories to include all the necessary functionality planned for the App that fulfils the user requirements.
+
+*What still puzzles us? What potential problems do we foresee?*
+
+- There are still parts of the application that are non-functional that were not included in the User Stories are the epics but the application would seem empty without.
+
+### Sprint 7
+
+The goals of this sprint are to:
+
+- Finish the remaining functions that were not part of the user stories and other requirements listed in the project brief previously missed out in the planning phase. This includes:
+  - Readme
+  - Class Diagram
+  - Connecting missing and/or currently non-functional views
+  - Implementing the remaining CRUD functionalities for existing views not listed in the user stories
+
+While I currently have an MVP having completed all my most vital user stories there are several pieces of documentation or non work parts of my application that have not been completed. I believe that while they are not listed it is important that they are at a minimum functional, within the program.
+
+**SprintBoard(Start)**
+
+![ProjectBoardSprint7](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard7Start.png)
+
+**SprintBoard(End)**
+
+![ProjectBoardSprint7](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard7End.png)
+
+**RetroSpective**
+
+*What did we do well, that if we don't discuss might forget?*
+
+*What did we learn?*
+
+*What should we do differently next time?*
+
+*What still puzzles us? What potential problems do we foresee?*
