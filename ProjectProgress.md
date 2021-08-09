@@ -281,10 +281,9 @@ By the end of this sprint my GUI had been re-vamped and been implemented with th
 ![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6Details.png)
 ![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterEditHuntRecord.png)
 ![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterHabitsList.png)
-![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterHuntRecords.png)
-![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterHabitsList.png)
 ![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterHuntRecordsList.png)
 ![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterList.png)
+![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6NewMonster.png)
 ![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6NewRecord.png)
 ![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6NewWeapon.png)
 
