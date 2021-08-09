@@ -7,6 +7,13 @@ namespace BusinessLayer
 {
     public class WeaponManager
     {
+        public void CreateNewWeapon(string name, int weaponId, int rarity, int elementId, int ailmentId)
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            Weapon weapon = new Weapon { Name = name, WeaponId = weaponId, Rarity = rarity, ElementId = elementId, AilmentId = ailmentId };
+            db.Weapons.Add(weapon);
+            db.SaveChanges();
+        }
         public List<WeaponType> RetrieveAllWeaponTypes()
         {
             using (var db = new MonsterHunterJournalDBContext())
