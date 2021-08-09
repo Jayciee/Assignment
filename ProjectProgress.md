@@ -275,6 +275,20 @@ The goals of this sprint are to:
 
 ![ProjectBoardSprint6](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard6End.png)
 
+**Gui Screen Shots**
+By the end of this sprint my GUI had been re-vamped and been implemented with the most vital functionality. This can be seen below:
+![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6HomePage.png)
+![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6Details.png)
+![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterEditHuntRecord.png)
+![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterHabitsList.png)
+![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterHuntRecords.png)
+![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterHabitsList.png)
+![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterHuntRecordsList.png)
+![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterList.png)
+![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6NewRecord.png)
+![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6NewWeapon.png)
+
+
 **RetroSpective**
 
 Overall this sprint was a big success and put me back on target for delivering an MVP. All user stories set out in this sprint were completed including all the sprints that were previously laid out from Sprint 5.
