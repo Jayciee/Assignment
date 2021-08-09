@@ -49,5 +49,10 @@ namespace BusinessLayer
                         select wt.TypeName;
             return query.FirstOrDefault();
         }
+        public int GetWeaponTypeIdByWeaponTypeName(string weaponTypeName)
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            return db.WeaponTypes.Where(w => w.TypeName == weaponTypeName).Select(w=>w.WeaponTypeId).FirstOrDefault();
+        }
     }
 }

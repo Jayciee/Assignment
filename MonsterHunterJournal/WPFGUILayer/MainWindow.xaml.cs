@@ -10,7 +10,6 @@ namespace WPFGUILayer
     /// </summary>
     public partial class MainWindow : Window
     {
-        string _bindingMessage;
         public MainWindow()
         {
             InitializeComponent();

@@ -22,12 +22,39 @@ namespace BusinessLayer
             return query.ToList();    
         }
 
-        public void CreateNewHabit(string testHabit, string testDescription)
+        public void CreateNewHabit(string habitName, string habitDescription)
         {
             using var db = new MonsterHunterJournalDBContext();
-            Habit habit = new Habit() { HabitName = testHabit, Description = testDescription };
+            Habit habit = new Habit() { HabitName = habitName, Description = habitDescription };
             db.Habits.Add(habit);
             db.SaveChanges();
+        }
+        public int FindHabitIdByName(string name) // Needs Unit Test
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            var query = from h in db.Habits
+                        where h.HabitName==name
+                        select h.HabitId;
+            return query.FirstOrDefault();
+        }
+        public void UpdateHabitId(int idToChange, string newHabitName, string newHabitDescription) // Needs unit test
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            var query = from h in db.Habits
+                        where h.HabitId == idToChange
+                        select h;
+            var habit = query.FirstOrDefault();
+            habit.HabitName = newHabitName;
+            habit.Description = newHabitDescription;
+            db.SaveChanges();
+        }
+        public Habit GetHabitById(int id) // Needs Unit Test
+        {
+            using var db = new MonsterHunterJournalDBContext();
+            var query = from h in db.Habits
+                        where h.HabitId == id
+                        select h;
+            return query.FirstOrDefault();
         }
        
     }

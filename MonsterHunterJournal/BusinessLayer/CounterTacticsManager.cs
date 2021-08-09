@@ -9,10 +9,11 @@ namespace BusinessLayer
 {
     public class CounterTacticsManager
     {
-        public string GetCounterTactic(int weaponId, int habitId)
+        public string GetCounterTacticDescription(int weaponId, int habitId)
         {
             using var db = new MonsterHunterJournalDBContext();
-            return db.CounterTactics.Where(a => a.WeaponTypeId == weaponId && a.HabitId == habitId).Select(a => a.Description).FirstOrDefault();
+            var query = db.CounterTactics.Where(a => a.WeaponTypeId == weaponId && a.HabitId == habitId).Select(a => a.Description).FirstOrDefault();
+            return query == null ? "CounterTactic does not yet Exist" : query;
         }
         public void CreateNewCounterTactic(int weaponTypeId, int habitId)
         {

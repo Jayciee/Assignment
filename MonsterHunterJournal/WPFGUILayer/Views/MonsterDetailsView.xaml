@@ -6,7 +6,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFGUILayer.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="700" d:DesignWidth="1000">
     <UserControl.DataContext>
         <local:MonsterDetailsViewModel/>
     </UserControl.DataContext>
@@ -25,25 +25,35 @@
                 <ImageBrush ImageSource="/WPFGUILayer;component/Images/MHBackground.jpg"></ImageBrush>
             </StackPanel.Background>
         </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Background="Black" Opacity="0.4"></StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Background="Black" Opacity="0.4"></StackPanel>
         <Label x:Name="monsterNameLabel" Grid.Row="0"
+               
                Foreground="white"
                FontFamily="{StaticResource MonFont}"
                Grid.ColumnSpan="2"
                Content="(MonsterName)" 
-               FontSize="30" 
+               FontSize="40" 
                Margin="0,10,0,0"
                HorizontalAlignment="Center"></Label>
-        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Margin="0,10,0,0">
             <Image Height="140"
                                Width="200"
                                Stretch="Fill"
                                Grid.Row="1"
                                Source="../Images/MHLogo.png"/>
-            <Button x:Name="monsterImageEditBtn" Content="Edit Image" Width="250" Margin="0,10,0,0"></Button>
-            <TextBox
+            <Button x:Name="monsterImageEditBtn" 
+                    Background="BurlyWood"
+                    Content="Edit Image" 
+                    Height="40" 
+                    Width="250" 
+                    Margin="0,10,0,0"></Button>
+            <ScrollViewer Width="240" HorizontalAlignment="Center" Margin="15,0,0,0">
+                <TextBox x:Name="monsterDescriptionTextBox"
                     TextWrapping="Wrap"
                     VerticalAlignment="Stretch"
-                    Background="FloralWhite"
+                    Background="Black"
+                    Foreground="White"
                     MaxWidth="280"
                     AcceptsReturn="True"
                     VerticalScrollBarVisibility="Auto"
@@ -52,9 +62,17 @@
                     Height="80"
                     Margin="0,10,0,0"
                     Text="" />
-            <Button x:Name="editMonsterDescriptionBtn" Content ="Edit Description" Margin="0,10,0,0" Width="250"></Button>
+            </ScrollViewer>
+            
+            <Button 
+                x:Name="editMonsterDescriptionBtn" 
+                Background="DarkGoldenrod"
+                Height="40"
+                Content ="Edit Description" 
+                Margin="0,10,0,0" 
+                Width="250"></Button>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Background="Black" Opacity="0.2"></StackPanel>
+        
         <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
             <TextBox x:Name="monsterTypeTextBox"
                      Foreground="white"
@@ -79,10 +97,23 @@
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 Width="256"
                 Margin="0,10,0,0"/>
-            <Button x:Name="monsterHabitsListBtn" Content="Habits List" Width="250" Margin="10,20,0,0"/>
-            <StackPanel Margin="0,50,0,0" Orientation="Horizontal">
-                <Button x:Name="saveChangesBtn" Content="Apply Changes" Width="150" Margin="30,10,0,0"/>
-                <Button x:Name="deleteMonsterEntryBtn" Content="Delete Monster" Width="150" Margin="50,10,0,0"/>
+            <Button 
+                x:Name="monsterHabitsListBtn" 
+                Background="DarkOrange"
+                Content="Habits List" 
+                Width="250" 
+                Height="50"
+                Margin="10,20,0,0" 
+                Click="monsterHabitsListBtn_Click"/>
+            <StackPanel Margin="0,50,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button 
+                    x:Name="saveChangesBtn" 
+                    Content="Apply Changes" 
+                    Background="DarkKhaki"
+                    Width="150"
+                    FontSize="17"
+                    Height="70"
+                    Margin="30,10,0,0"/>
             </StackPanel>
 
 

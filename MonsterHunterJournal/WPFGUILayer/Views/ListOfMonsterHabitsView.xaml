@@ -6,11 +6,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFGUILayer.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    
+             d:DesignHeight="700" d:DesignWidth="1000">
+    <UserControl.DataContext>
+        <local:ListOfMonsterHabitsViewModel/>
+    </UserControl.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -18,6 +21,12 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" Grid.ColumnSpan="2" >
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/WPFGUILayer;component/Images/MHBackground.jpg"></ImageBrush>
+            </StackPanel.Background>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Background= "Black" Opacity="0.7" Margin="20,0,20,30"/>
         <Label Content="Habits List"
                FontFamily="{StaticResource MonFont}"
                HorizontalAlignment="Center" 
@@ -27,65 +36,74 @@
             <ListBox Name="habitsListBox"
                      Margin="0,10,0,0"
                      Height="320"
-                     Width="350"></ListBox>
+                     Width="350" SelectionChanged="SelectionChanged"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
-            <StackPanel Margin="0,20,0,0">
+            <StackPanel Margin="0,20,0,0" x:Name ="huntRecordCard" Visibility="Collapsed">
                 <materialDesign:Card
-                    Width="250">
+                    Width="350"
+                    Height="500">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="200" />
+                            <RowDefinition Height="100" />
+
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" 
-                                   Text="HunterRecordID : Default" 
-                                   Margin ="0,5,0,10" 
-                                   FontWeight="ExtraBold" 
-                                   HorizontalAlignment="Center"></TextBlock>
-                        <TextBox
+                        <StackPanel Grid.Row="0" Grid.RowSpan="6">
+                            <StackPanel.Background>
+                                <ImageBrush ImageSource="/WPFGUILayer;component/Images/MHBackground.jpg"></ImageBrush>
+                            </StackPanel.Background>
+                        </StackPanel>
+                        <TextBox x:Name="habitName"
+                            Foreground="White"
+                                 FontFamily="{StaticResource MonFont}"
+                                 FontSize="30"
+                            Width="250"  
+                             HorizontalAlignment="Center" 
+                            materialDesign:HintAssist.Hint="Habit Name"
+                            Margin ="0,5,0,10">
+                        </TextBox>
+                        <ScrollViewer Grid.Row="1">
+                            <TextBox
                             x:Name="habitDescriptionBox"
-                            Grid.Row="1"
                             TextWrapping="Wrap"
                             VerticalAlignment="Stretch"
-                            Background="FloralWhite"
-                            MaxWidth="200"
+                            Background="Black"
+                                Foreground="White"
+                            MaxWidth="250"
                             AcceptsReturn="True"
                             VerticalScrollBarVisibility="Auto"
                             SpellCheck.IsEnabled="True"
                             materialDesign:HintAssist.Hint="Monster Habit description goes here."
-                            Height="80"
-                            Margin="0,10,0,0"
+                            Height="100"
+                            FontSize="15"
+                            Margin="0,20,0,0"
                             Text="When in close quarters the target monster will turn sharply and attempt to bite you." />
-                        <StackPanel Grid.Row="2">
-                            <ComboBox
-                            Grid.Row="2"
-                            Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                            materialDesign:HintAssist.Hint="Type of Weapon"
-                            ItemsSource="{Binding ShortStringList}"
-                            materialDesign:TextFieldAssist.HasClearButton="True"
-                            Width="200"
-                            Margin="0,10,0,0">
-                            </ComboBox>
-                        </StackPanel>
-                        <TextBox
-                                Grid.Row="3"
-                                TextWrapping="Wrap"
-                                VerticalAlignment="Stretch"
-                                Background="FloralWhite"
-                                MaxWidth="200"
-                                AcceptsReturn="True"
-                                VerticalScrollBarVisibility="Auto"
-                                SpellCheck.IsEnabled="True"
-                                materialDesign:HintAssist.Hint="CounterTactic description here."
-                                Height="80"
-                                Margin="0,10,0,0"
-                                Text="Timing a dodge roll to the side will provide sufficient time to bonk the monster once on the head." />
+                        </ScrollViewer>
+                        
+                       
+                        
+                        <Button x:Name="saveChangesBtn"
+                            Margin="20,20,20,0"
+                            Background="DarkKhaki"
+                            Content="Save Changes"
+                            FontSize="15"
+                            Height="30"
+                            Grid.Row="5" Click="saveChangesBtn_Click"/>
                     </Grid>
+                    
                 </materialDesign:Card>
             </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button 
+                x:Name="AddHabitBtn" 
+                Content="Add New Habit" 
+                Width="250" Height="100"
+                Foreground="White" 
+                FontSize="25"
+                Background="DarkOrange" ></Button>
         </StackPanel>
     </Grid>
 </UserControl>

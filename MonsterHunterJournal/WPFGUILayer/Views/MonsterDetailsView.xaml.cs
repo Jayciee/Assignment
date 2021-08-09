@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using WPFGUILayer.ViewModels;
 using BusinessLayer;
 using System.Diagnostics;
+using System.Windows;
 
 namespace WPFGUILayer.Views
 {
@@ -55,6 +56,13 @@ namespace WPFGUILayer.Views
                     ailmentComboBox.SelectedIndex = ailmentComboBox.Items.IndexOf(item);
                 }
             }
+            monsterDescriptionTextBox.Text = _mm.GetMonsterDescriptionByID(_model.SelectedMonsterId);
+        }
+
+        private void monsterHabitsListBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            var modelToPass = new ListOfMonsterHabitsViewModel(_model.SelectedMonsterId);
+            ((MainWindow)Application.Current.MainWindow).DataContext = new ListOfMonsterHabitsView(modelToPass);
         }
     }
 }
