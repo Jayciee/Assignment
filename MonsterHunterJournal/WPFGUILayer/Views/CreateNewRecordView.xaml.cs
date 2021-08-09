@@ -18,7 +18,7 @@ namespace WPFGUILayer.Views
         private MonsterManager _mm = new MonsterManager();
         private RecordManager _rm = new RecordManager();
         private WeaponManager _wm = new WeaponManager();
-        bool _Successful = false;
+        bool _successful = false;
         public CreateNewRecordView()
         {
             InitializeComponent();
@@ -54,7 +54,7 @@ namespace WPFGUILayer.Views
 
         private void succeedListBoxItem_Selected(object sender, System.Windows.RoutedEventArgs e)
         {
-            _Successful = true;
+            _successful = true;
             if (recordedSizeTextBox.Visibility == Visibility.Collapsed)
             {
                 recordedSizeTextBox.Visibility = Visibility.Visible;
@@ -65,9 +65,9 @@ namespace WPFGUILayer.Views
         private void failedListBoxItem_Selected(object sender, System.Windows.RoutedEventArgs e)
         {
             
-            if (_Successful)
+            if (_successful)
             {
-                _Successful = false;
+                _successful = false;
                 if (recordedSizeTextBox.Visibility == Visibility.Visible)
                 {
                     recordedSizeTextBox.Visibility = Visibility.Collapsed;
@@ -95,7 +95,7 @@ namespace WPFGUILayer.Views
             {
                 sizeSubmitted = (decimal)00.00;
             }
-            _rm.AddNewRecord(huntername, timeTaken, monsterId, weaponId, _Successful, sizeSubmitted);
+            _rm.AddNewRecord(huntername, timeTaken, monsterId, weaponId, _successful, sizeSubmitted);
             MessageBox.Show("New Record Created!");
             Reset();
         }
@@ -107,9 +107,9 @@ namespace WPFGUILayer.Views
             minutesTakenComboBox.SelectedIndex = -1;
             secondsTakenComboBox.SelectedIndex = -1;
             recordedSizeTextBox.Text = "";
-            if (_Successful)
+            if (_successful)
             {
-                _Successful = false;
+                _successful = false;
                 if (recordedSizeTextBox.Visibility == Visibility.Visible)
                 {
                     recordedSizeTextBox.Visibility = Visibility.Collapsed;

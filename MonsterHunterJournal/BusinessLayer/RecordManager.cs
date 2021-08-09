@@ -38,7 +38,27 @@ namespace BusinessLayer
                 db.SaveChanges();
             }
         }
+        public Record GetRecordByRecordId(int recordId) // Needs Unit test
+        {
+            var db = new MonsterHunterJournalDBContext();
+            return db.Records.Where(a => a.RecordId == recordId).FirstOrDefault();
+        }
 
+        public int GetMonsterIdFromRecordId(int recordId) // Needs Unit Test
+        {
+            var db = new MonsterHunterJournalDBContext();
+            return db.Records.Where(a => a.RecordId == recordId).Select(a=>a.MonsterId).FirstOrDefault();
+        }
+        public int GetWeaponIdFromRecordId(int recordId)
+        {
+            var db = new MonsterHunterJournalDBContext();
+            return db.Records.Where(a => a.RecordId == recordId).Select(a => a.WeaponId).FirstOrDefault();
+        }
+        public int GetRecordIdByNameTimeAndSize(string name, decimal time, decimal size) // Needs Unit Test
+        {
+            var db = new MonsterHunterJournalDBContext();
+            return db.Records.Where(a => a.HunterName==name && a.TimeTaken==time && a.RecordedMonsterSize==size).Select(a=>a.RecordId).FirstOrDefault();
+        }
         public List<Record> RetrieveRecordsByMonsterId(int id)
         {
             var db = new MonsterHunterJournalDBContext();
@@ -80,6 +100,7 @@ namespace BusinessLayer
                         select r;
             return query.ToList();
         }
+        
         public bool UpdateNewRecord(int recordId,string hunterName, decimal newTime, decimal newSize, int newMonsterId, int newWeaponId, bool newHuntSuccess)
         {
             using (var db = new MonsterHunterJournalDBContext())
@@ -103,7 +124,7 @@ namespace BusinessLayer
 
         }
 
-        public void DeleteNewRecord(int recordId)
+        public void DeleteRecord(int recordId)
         {
             using (var db = new MonsterHunterJournalDBContext())
             {

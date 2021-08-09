@@ -112,7 +112,7 @@ namespace UnitTests
                where r.HunterName == testName
                select r;
             int preCount = db.Records.ToList().Count();
-            _recordManager.DeleteNewRecord(record.FirstOrDefault().RecordId);
+            _recordManager.DeleteRecord(record.FirstOrDefault().RecordId);
             int postCount = db.Records.ToList().Count();
             Assert.That(preCount - 1, Is.EqualTo(postCount));
         }

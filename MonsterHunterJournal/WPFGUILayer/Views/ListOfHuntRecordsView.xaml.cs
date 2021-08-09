@@ -5,7 +5,7 @@ using System.Windows.Controls;
 using WPFGUILayer.ViewModels;
 using BusinessLayer;
 using System.Diagnostics;
-
+using System.Windows;
 
 namespace WPFGUILayer.Views
 {
@@ -19,6 +19,7 @@ namespace WPFGUILayer.Views
         MonsterManager _mm = new MonsterManager();
         RecordManager _rm = new RecordManager();
         WeaponManager _wm = new WeaponManager();
+        int _indexOfSelectedRecordFromList;
         public ListOfHuntRecordsView()
         {
             InitializeComponent();
@@ -87,6 +88,38 @@ namespace WPFGUILayer.Views
                 _ => ascending ? _rm.RetrieveRecordsByMonsterIdSortedByTimeAsc(_model.SelectedMonsterId) : _rm.RetrieveRecordsByMonsterIdSortedByTimeDesc(_model.SelectedMonsterId),
             };
             PopulateHuntRecordsListView(recordList);
+        }
+
+        private void editRecordBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (_indexOfSelectedRecordFromList != null)
+            {
+                
+                listRec currentListRec = (listRec)HunterRecordListView.SelectedItems[_indexOfSelectedRecordFromList];
+                string name = currentListRec.HunterName;
+                decimal time = Convert.ToDecimal(currentListRec.TimeTaken);
+                decimal size = Convert.ToDecimal(currentListRec.RecordedMonsterSize);
+                int recordId = _rm.GetRecordIdByNameTimeAndSize(name, time, size);
+                var modelToPass = new HuntRecordDetailsViewModel(recordId);
+                ((MainWindow)Application.Current.MainWindow).DataContext = new HuntRecordDetailsView(modelToPass);
+            }
+            else
+            {
+                MessageBox.Show("No Record Selected");
+            }
+        }
+
+        private void deleteRecordBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (_indexOfSelectedRecordFromList != null)
+            {
+                _rm.DeleteRecord(_indexOfSelectedRecordFromList);
+                MessageBox.Show("Successfully Deleted!");
+            }
+            else
+            {
+                MessageBox.Show("No Record Selected");
+            }
         }
     }
     public class listRec
