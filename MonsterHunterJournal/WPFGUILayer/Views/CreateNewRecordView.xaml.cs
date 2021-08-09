@@ -83,21 +83,28 @@ namespace WPFGUILayer.Views
             int weaponId = _wm.GetWeaponIDByName(weaponUsedComboBox.SelectedItem.ToString());
             decimal timeTaken = Convert.ToDecimal(Convert.ToDouble(minutesTakenComboBox.SelectedItem.ToString()) + Convert.ToDouble(secondsTakenComboBox.SelectedItem.ToString()) / 100);
             decimal sizeSubmitted;
-            if (recordedSizeTextBox.Text != null)
+            if (_successful)
             {
                 bool parsed = decimal.TryParse(recordedSizeTextBox.Text, out sizeSubmitted);
                 if (!parsed)
                 {
-                    sizeSubmitted = (decimal)00.00;
+                    MessageBox.Show("Recorded Size was not valid, please try again.");
+                }
+                else
+                {
+                    _rm.AddNewRecord(huntername, timeTaken, monsterId, weaponId, _successful, sizeSubmitted);
+                    MessageBox.Show("New Record Created!");
+                    Reset();
                 }
             }
             else
             {
                 sizeSubmitted = (decimal)00.00;
+                _rm.AddNewRecord(huntername, timeTaken, monsterId, weaponId, _successful, sizeSubmitted);
+                MessageBox.Show("New Record Created!");
+                Reset();
             }
-            _rm.AddNewRecord(huntername, timeTaken, monsterId, weaponId, _successful, sizeSubmitted);
-            MessageBox.Show("New Record Created!");
-            Reset();
+            
         }
         private void Reset()
         {
@@ -110,6 +117,7 @@ namespace WPFGUILayer.Views
             if (_successful)
             {
                 _successful = false;
+                succeedListBoxItem.IsSelected = false;
                 if (recordedSizeTextBox.Visibility == Visibility.Visible)
                 {
                     recordedSizeTextBox.Visibility = Visibility.Collapsed;
