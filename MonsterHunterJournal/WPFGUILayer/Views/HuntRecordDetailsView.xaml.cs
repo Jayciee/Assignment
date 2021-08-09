@@ -109,6 +109,34 @@ namespace WPFGUILayer.Views
         }
         private void saveRecordChangesBtn_Click(object sender, RoutedEventArgs e)
         {
+            string name = nameTextBox.Text;
+            decimal time = Convert.ToDecimal(Convert.ToDouble(minutesTakenComboBox.SelectedItem.ToString()) + (Convert.ToDouble(secondsTakenComboBox.SelectedItem.ToString()) / 100));
+            decimal size;
+            if (recordedSizeTextBox.Text != null)
+            {
+                bool parsed = decimal.TryParse(recordedSizeTextBox.Text, out size);
+                if (!parsed)
+                {
+                    size = (decimal)00.00;
+                }
+            }
+            else
+            {
+                size = (decimal)00.00;
+            }
+            int monsterId = _mm.GetMonsterIDByName(huntedMonsterComboBox.SelectedItem.ToString());
+            int weaponId = _wm.GetWeaponIDByName(weaponUsedComboBox.SelectedItem.ToString());
+            if (MessageBox.Show("Update Changes?",
+                    "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                _rm.UpdateNewRecord(_model.SelectedRecordId, name, time, size, monsterId, weaponId, _successful);
+                MessageBox.Show("Record Updated!");
+            }
+            else
+            {
+                //Do Nothing
+            }
+            
             
         }
 
