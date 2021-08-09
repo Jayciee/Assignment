@@ -92,9 +92,9 @@ namespace WPFGUILayer.Views
 
         private void editRecordBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            if (_indexOfSelectedRecordFromList != null)
+            
+            if (HunterRecordListView.SelectedItems != null && HunterRecordListView.SelectedItems.Count != 0)
             {
-                
                 listRec currentListRec = (listRec)HunterRecordListView.SelectedItems[_indexOfSelectedRecordFromList];
                 string name = currentListRec.HunterName;
                 decimal time = Convert.ToDecimal(currentListRec.TimeTaken);
@@ -111,10 +111,28 @@ namespace WPFGUILayer.Views
 
         private void deleteRecordBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            if (_indexOfSelectedRecordFromList != null)
+            
+            
+            if (HunterRecordListView.SelectedItems != null && HunterRecordListView.SelectedItems.Count != 0)
             {
-                _rm.DeleteRecord(_indexOfSelectedRecordFromList);
-                MessageBox.Show("Successfully Deleted!");
+                if (MessageBox.Show("Permanently Delete Selected Record?",
+                    "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    listRec currentListRec = (listRec)HunterRecordListView.SelectedItems[_indexOfSelectedRecordFromList];
+                    string name = currentListRec.HunterName;
+                    decimal time = Convert.ToDecimal(currentListRec.TimeTaken);
+                    decimal size = Convert.ToDecimal(currentListRec.RecordedMonsterSize);
+                    int recordId = _rm.GetRecordIdByNameTimeAndSize(name, time, size);
+                    Debug.WriteLine(recordId);
+                    _rm.DeleteRecord(recordId);
+                    MessageBox.Show("Successfully Deleted!");
+                    PopulateHuntRecordsListView();
+
+                }
+                else
+                {
+                    //Do Nothing
+                }
             }
             else
             {
