@@ -45,7 +45,7 @@ namespace UnitTests
             var getHabit = getHabitQuery.FirstOrDefault();
             var getWeapon = db.WeaponTypes.FirstOrDefault();
             var query = db.CounterTactics.Where(a => a.HabitId == getHabit.HabitId && a.WeaponTypeId == getWeapon.WeaponTypeId).Select(a => a.Description).FirstOrDefault();
-            Assert.That(_ctm.GetCounterTactic(getWeapon.WeaponTypeId, getHabit.HabitId), Is.EqualTo("No one has added a countertactic for this habit yet"));
+            Assert.That(_ctm.GetCounterTacticDescription(getWeapon.WeaponTypeId, getHabit.HabitId), Is.EqualTo("No one has added a countertactic for this habit yet"));
         }
         [Test]
         public void AssertThatGivenMonsterIDAndWeaponID_Return_CounterTactic()
@@ -60,7 +60,7 @@ namespace UnitTests
             var getHabit = getHabitQuery.FirstOrDefault();
             var getWeapon = db.WeaponTypes.FirstOrDefault();
             var query = db.CounterTactics.Where(a => a.HabitId == getHabit.HabitId && a.WeaponTypeId == getWeapon.WeaponTypeId).Select(a => a.Description).FirstOrDefault();
-            Assert.That(_ctm.GetCounterTactic(getWeapon.WeaponTypeId, getHabit.HabitId), Is.EqualTo(query));
+            Assert.That(_ctm.GetCounterTacticDescription(getWeapon.WeaponTypeId, getHabit.HabitId), Is.EqualTo(query));
         }
         [Test]
         
