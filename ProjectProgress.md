@@ -275,19 +275,6 @@ The goals of this sprint are to:
 
 ![ProjectBoardSprint6](https://github.com/Jayciee/Assignment/blob/main/Images/SprintBoard/ProjectSprintBoard6End.png)
 
-**Gui Screen Shots**
-By the end of this sprint my GUI had been re-vamped and been implemented with the most vital functionality. This can be seen below:
-![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6HomePage.png)
-![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6Details.png)
-![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterEditHuntRecord.png)
-![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterHabitsList.png)
-![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterHuntRecordsList.png)
-![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6MonsterList.png)
-![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6NewMonster.png)
-![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6NewRecord.png)
-![MainWindow](https://github.com/Jayciee/Assignment/blob/main/Images/GUIScreenshots/Sprint6NewWeapon.png)
-
-
 **RetroSpective**
 
 Overall this sprint was a big success and put me back on target for delivering an MVP. All user stories set out in this sprint were completed including all the sprints that were previously laid out from Sprint 5.
@@ -333,8 +320,35 @@ While I currently have an MVP having completed all my most vital user stories th
 
 *What did we do well, that if we don't discuss might forget?*
 
+- Good of prioritisation on tasks to complete given the remaining time
+
 *What did we learn?*
+
+- Not everything needs to be included beyond the MVP
 
 *What should we do differently next time?*
 
-*What still puzzles us? What potential problems do we foresee?*
+- Have a better spread of user stories and tasks across the sprint. Due to unforeseen errors and bugs many tasks were put on the backburner and piled up towards the end.
+
+## Project Retrospective
+
+*What did we do well, that if we don't discuss might forget?*
+
+- Overall planning was good. Sprints could have been organised better with better spread user stories.
+- The amount of time given to learn new user stories and implement them was good.
+
+*What did we learn?*
+
+- WPF : Grids, StackPanels, Etc.
+- When choosing a project put more time into the planning process to save you headaches deeper into the development phase of the project.
+- When choosing a project as both a product owner, test and developer try and think more realistically about what is achievable within a given time-frame
+- Create more user stories that cover a range if not all the features that you want to achieve by the end of the project
+
+*What should we do differently next time?*
+
+- Give more user stories towards the start of the project in earlier sprints to better pace myself.
+- Give more time to user stories that may incur large blockers or introduce major bugs.
+
+
+
+Overall I was happy with the project and learnt a lot about creating 3 tier applications from it, I believe I have ultimately achieved the majority, if not all, of the requirements asked of me from the project brief.
