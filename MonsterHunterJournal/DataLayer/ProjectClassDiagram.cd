@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="DataLayer.Ailment">
+    <Position X="11" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAEAAAAAAQAAAAIAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Customisations\AilmentCustomisation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Monsters" />
+      <Property Name="Weapons" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DataLayer.CounterTactic">
+    <Position X="20.5" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAgAAAAAACEAAAAAAAAAAAAAAAQAAAAAQA=</HashCode>
+      <FileName>CounterTactic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLayer.Element">
+    <Position X="11" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAEAAAAAAQABAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Customisations\ElementCustomisation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Monsters" />
+      <Property Name="Weapons" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DataLayer.Habit">
+    <Position X="14.75" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgBAAIAAAAAAAAAAAAAAAAAAEAAAAAAQA=</HashCode>
+      <FileName>Habit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CounterTactics" />
+      <Property Name="MonstersHabits" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DataLayer.Monster">
+    <Position X="7.25" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAEAEABghQAEAAAAEAQAiAAIAAAAAQEAAAAAAAA=</HashCode>
+      <FileName>Customisations\MonsterCustomisation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="MonstersHabits" />
+      <Property Name="Records" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DataLayer.MonstersHabit">
+    <Position X="8" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAgAQAAAAAQA=</HashCode>
+      <FileName>MonstersHabit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLayer.Record">
+    <Position X="4" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAEAAAAAAAEABAAUAAAAAAAAAgAAoAACAIACAA=</HashCode>
+      <FileName>Customisations\RecordCustomisation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLayer.Size">
+    <Position X="4" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAFAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAIAA=</HashCode>
+      <FileName>Size.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Monsters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DataLayer.Weapon">
+    <Position X="16.25" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IgAAAAAAAAAAAAAEAAhEQAQABAAIQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Customisations\WeaponCustomisation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataLayer.WeaponType">
+    <Position X="20.75" Y="5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAMAAAEAAAAAAAAABAAAAAAAAAAABA=</HashCode>
+      <FileName>Customisations\WeaponTypeCustomisation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CounterTactics" />
+      <Property Name="Weapons" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
