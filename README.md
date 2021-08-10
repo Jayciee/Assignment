@@ -42,19 +42,19 @@ If you do not have the following installed please look online for the appropriat
 
 Once you have followed all these steps you should be met with a wizard: 
 
-![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/WizardLaunch)
+![WizardLaunch](https://github.com/Jayciee/Assignment/blob/main/Images/Setup/WizardLaunch.png)
 
 Follow the instructions according to the screenshots below:
 
 Choose an Install Location
 
-![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/InstallLocation)
+![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/InstallLocation.png)
 
 Press Install
 
-![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/PressInstall)
+![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/PressInstall.png)
 
-![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/LoadingStatus)
+![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/LoadingStatus.png)
 
 Momentarily you should receive a pop up notification.
 
@@ -64,7 +64,7 @@ Please press yes to the notification.
 
 Finally you should be met with this window
 
-![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/Finished)
+![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/Finished.png)
 
 ## Step 6: Launching the application
 
