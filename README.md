@@ -48,13 +48,13 @@ Follow the instructions according to the screenshots below:
 
 Choose an Install Location
 
-![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/InstallLocation.png)
+![InstallLocation](https://github.com/Jayciee/Assignment/blob/main/Images/Setup/InstallLocation.png)
 
 Press Install
 
-![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/PressInstall.png)
+![PressInstall](https://github.com/Jayciee/Assignment/blob/main/Images/Setup/PressInstall.png)
 
-![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/LoadingStatus.png)
+![LoadingStatus](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/LoadingStatus.png)
 
 Momentarily you should receive a pop up notification.
 
@@ -64,13 +64,13 @@ Please press yes to the notification.
 
 Finally you should be met with this window
 
-![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/Finished.png)
+![Finished](https://github.com/Jayciee/Assignment/blob/main/Images/Setup/Finished.png)
 
 ## Step 6: Launching the application
 
 Finally you should the application shortcut on your desktop like so:
 
-![WizardLaunch](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/Icon)
+![Icon](https://github.com/Jayciee/Assignment/blob/main/Images/Setup/Icon.png)
 
 Or you can find the program in your control panel.
 
