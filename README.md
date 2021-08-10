@@ -54,7 +54,7 @@ Press Install
 
 ![PressInstall](https://github.com/Jayciee/Assignment/blob/main/Images/Setup/PressInstall.png)
 
-![LoadingStatus](https://github.com/Jayciee/Assignment/tree/main/Images/Setup/LoadingStatus.png)
+![LoadingStatus](https://github.com/Jayciee/Assignment/blob/main/Images/Setup/LoadingStatus.png)
 
 Momentarily you should receive a pop up notification.
 
