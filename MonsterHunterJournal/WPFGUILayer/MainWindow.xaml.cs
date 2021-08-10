@@ -13,6 +13,7 @@ namespace WPFGUILayer
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void newHunterRecordBtn_Click(object sender, RoutedEventArgs e)
